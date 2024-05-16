@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Signage Master View</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .app-icon {
+            width: 100px; /* ここでアイコンのサイズを指定します */
+            height: auto;
+        }
+        .screenshot-img {
+            width: 50%; /* 画像のサイズを半分に設定 */
+            height: auto;
+        }
+        .video-container {
+            max-width: 60%; /* デモ動画のサイズを60%に設定 */
+            margin-left: 0; /* 左寄せ */
+        }
+        .section-margin {
+            margin-top: 4rem; /* セクション間の余白を設定 */
+        }
+        .custom-header {
+            background-color: #f0f0f0; /* カスタムの灰色の背景色 */
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header class="custom-header text-black text-center py-3">
         <h1>Signage Master View</h1>
-        <img src="./image/icon.png" alt="アプリアイコン">
+        <img src="./image/icon.png" alt="アプリアイコン" class="img-fluid app-icon">
     </header>
-    <main>
+    <main class="container my-4">
         <section>
             <h2>アプリの概要</h2>
             <p>Signage Master Viewは、iPhoneやiPadとHDMIモニターを組み合わせて簡単にデジタルサイネージを構築できるアプリです。<br>
@@ -19,41 +39,43 @@
             さらに、静止画や動画をプレイリストに登録すれば、指定した順番通りにコンテンツを自動再生できます。<br>
             静止画の再生時間は5、10、15、20秒から選択可能で、柔軟な表示設定が可能です。<br>
             Signage Master Viewで、あなたのビジネスやイベントをより魅力的に演出しましょう。<br></p>
-            
-            <img src="./image/overall.png" alt="全体構成">
-
+            <img src="./image/overall.png" alt="全体構成" class="img-fluid">
         </section>
-        <section>
+        <section class="mt-4 section-margin">
             <h2>デモ動画</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zPz4daSICcE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="ratio ratio-16x9 video-container">
+                <iframe src="https://www.youtube.com/embed/zPz4daSICcE" allowfullscreen></iframe>
             </div>
         </section>
-        <section>
+        <section class="mt-4 section-margin">
             <h2>画面の説明</h2>
-            <div class="screenshot">
-                <img src="./image/screenshot1.png" alt="スクリーンショット1">
-                <p>複数のプレイリストを作成できます。利用シーンに応じてプレイリストを使い分けることができます。</p>
-            </div>
-            <div class="screenshot">
-                <img src="./image/screenshot2.png" alt="スクリーンショット2">
-                <p>再生する順番の変更や追加が簡単にできます。</p>
-            </div>
-            <div class="screenshot">
-                <img src="./image/screenshot3.png" alt="スクリーンショット3">
-                <p>静止画像は、再生時間、時計表示の有無など設定可能です。</p>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="./image/screenshot1.png" alt="スクリーンショット1" class="img-fluid screenshot-img">
+                    <p>複数のプレイリストを作成できます。利用シーンに応じてプレイリストを使い分けることができます。</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="./image/screenshot2.png" alt="スクリーンショット2" class="img-fluid screenshot-img">
+                    <p>再生する順番の変更や追加が簡単にできます。</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="./image/screenshot3.png" alt="スクリーンショット3" class="img-fluid screenshot-img">
+                    <p>静止画像は、再生時間、時計表示の有無など設定可能です。</p>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="mt-4 section-margin">
             <h2>ダウンロード</h2>
-            <div class="appstore">
-                <a href="https://itunes.apple.com/jp/app/id6476825364?mt=8"><img src="./image/App_Store_Badge_JP.svg" alt="App Store"></a>
+            <div class="text-center">
+                <a href="https://itunes.apple.com/jp/app/id6476825364?mt=8"><img src="./image/App_Store_Badge_JP.svg" alt="App Store" class="img-fluid"></a>
             </div>
         </section>
     </main>
-    <footer>
-        <a href="https://forms.gle/43KkXAhtvhLcNvZu7">問い合わせ</a>
+    <footer class="bg-light text-center py-3">
+        <a href="https://forms.gle/43KkXAhtvhLcNvZu7">問い合わせ</a> | 
         <a href="privacy.html">プライバシーポリシー</a>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
 </html>

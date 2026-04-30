@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="青梅メディカル駐車場マップのサポートページです。使い方、よくある質問、プライバシー、問い合わせ先を掲載しています。">
+  <title>青梅メディカル駐車場マップ サポート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8f5;
+      --surface: #ffffff;
+      --surface-soft: #eef3ef;
+      --text: #17211c;
+      --muted: #5b665f;
+      --line: #d9e0db;
+      --green: #1d7c4d;
+      --green-dark: #145d3a;
+      --red: #c53d35;
+      --blue: #276c9f;
+      --shadow: 0 16px 42px rgba(22, 37, 29, 0.12);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--green-dark);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    .site-header {
+      background:
+        linear-gradient(90deg, rgba(247, 248, 245, 0.96), rgba(247, 248, 245, 0.82)),
+        url("image/appicon.png");
+      background-position: center;
+      background-size: cover;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner,
+    main,
+    .footer-inner {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      min-height: 420px;
+      display: grid;
+      align-content: center;
+      gap: 28px;
+      padding: 56px 0 44px;
+    }
+
+    .app-mark {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--green-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.25rem);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: var(--surface);
+      color: var(--green-dark);
+    }
+
+    nav {
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      width: min(1040px, calc(100% - 32px));
+      min-height: 56px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    .nav-inner a {
+      flex: 0 0 auto;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-inner a:hover {
+      background: var(--surface-soft);
+    }
+
+    main {
+      display: grid;
+      gap: 56px;
+      padding: 56px 0;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+    }
+
+    .section-copy {
+      max-width: 760px;
+      margin: 0 0 22px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .panel {
+      min-height: 100%;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 10px 28px rgba(22, 37, 29, 0.07);
+    }
+
+    .panel p,
+    .faq p,
+    .notice p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .status-row {
+      display: grid;
+      gap: 12px;
+    }
+
+    .status {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .badge {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 10px;
+      color: #ffffff;
+      font-weight: 900;
+    }
+
+    .badge.available {
+      background: var(--green);
+    }
+
+    .badge.full {
+      background: var(--red);
+    }
+
+    .badge.unknown {
+      background: #737d77;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .notice {
+      padding: 22px;
+      border-left: 5px solid var(--blue);
+      background: #edf5fa;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-list strong {
+      display: inline-block;
+      min-width: 9em;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        min-height: 360px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .meta-list strong {
+        display: block;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="app-mark">
+        <img class="app-icon" src="image/appicon.png" alt="青梅メディカル駐車場マップのアプリアイコン">
+        <div>
+          <p class="eyebrow">サポートサイト</p>
+          <strong>青梅メディカル駐車場マップ</strong>
+        </div>
+      </div>
+      <h1>病院周辺の駐車場確認を、すばやく地図で。</h1>
+      <p class="lead">市立青梅総合医療センター周辺の対象駐車場を地図上に表示し、満空情報画像から判定した状態を確認できる iPhone / iPad アプリです。</p>
+      <div class="actions">
+        <a class="button" href="#contact">問い合わせる</a>
+        <a class="button secondary" href="#faq">よくある質問</a>
+      </div>
+    </div>
+    <nav aria-label="ページ内ナビゲーション">
+      <div class="nav-inner">
+        <a href="#about">概要</a>
+        <a href="#status">表示の見方</a>
+        <a href="#faq">FAQ</a>
+        <a href="#privacy">プライバシー</a>
+        <a href="#contact">問い合わせ</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>概要</h2>
+      <p class="section-copy">青梅メディカル駐車場マップは、市立青梅総合医療センター周辺の駐車場位置と満空状態を確認するためのアプリです。</p>
+      <div class="grid">
+        <article class="panel">
+          <h3>地図で確認</h3>
+          <p>病院周辺の対象駐車場を MapKit の地図上に表示します。</p>
+        </article>
+        <article class="panel">
+          <h3>満空状態を表示</h3>
+          <p>外部の駐車状況画像を取得し、端末上の文字認識で状態を判定します。</p>
+        </article>
+        <article class="panel">
+          <h3>現在地に対応</h3>
+          <p>位置情報の許可後、現在地を地図上に表示できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="status">
+      <h2>表示の見方</h2>
+      <p class="section-copy">地図上のアノテーションは、駐車場ごとの状態を短い記号で表示します。</p>
+      <div class="status-row">
+        <div class="status">
+          <span class="badge available">空</span>
+          <div>
+            <h3>空車</h3>
+            <p>駐車可能と判定された状態です。</p>
+          </div>
+        </div>
+        <div class="status">
+          <span class="badge full">満</span>
+          <div>
+            <h3>満車</h3>
+            <p>満車と判定された状態です。</p>
+          </div>
+        </div>
+        <div class="status">
+          <span class="badge unknown">?</span>
+          <div>
+            <h3>確認中または判定不可</h3>
+            <p>画像の取得失敗、通信状況、文字認識結果などにより状態を確認できない場合に表示されます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>よくある質問</h2>
+      <div class="faq-list">
+        <article class="faq">
+          <h3>駐車場情報が更新されない場合はどうすればよいですか。</h3>
+          <p>画面右上の更新ボタンを押してください。通信状況や情報提供元の状態によって、取得に時間がかかる場合があります。</p>
+        </article>
+        <article class="faq">
+          <h3>位置情報は何に使われますか。</h3>
+          <p>現在地を地図上に表示するためだけに使用します。アプリ独自のサーバーへ位置情報を送信したり保存したりしません。</p>
+        </article>
+        <article class="faq">
+          <h3>表示された満空状態は必ず正確ですか。</h3>
+          <p>駐車状況画像をもとに端末上で判定しているため、画像内容や通信状況、文字認識結果によって実際の状況と異なる場合があります。現地案内や公式情報もあわせて確認してください。</p>
+        </article>
+        <article class="faq">
+          <h3>市立青梅総合医療センターの公式アプリですか。</h3>
+          <p>いいえ。本アプリは市立青梅総合医療センターの公式アプリではありません。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>プライバシー</h2>
+      <div class="notice">
+        <p>本アプリは、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。</p>
+      </div>
+      <ul class="meta-list" aria-label="プライバシー項目">
+        <li><strong>位置情報</strong>現在地を地図上に表示するために使用します。</li>
+        <li><strong>外部通信</strong>駐車状況画像を取得するため、外部 URL へ通信します。</li>
+        <li><strong>文字認識</strong>取得した画像は端末上で満空状態の判定に使用します。</li>
+        <li><strong>トラッキング</strong>広告や他社アプリ・Webサイト横断の追跡には使用しません。</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>問い合わせ</h2>
+      <p class="section-copy">不具合報告やサポート依頼は、Google Form からご連絡ください。問い合わせ時は、利用端末、iOS バージョン、発生した操作、表示内容を添えていただくと確認がスムーズです。</p>
+      <div class="actions">
+        <a class="button" href="https://forms.gle/hxYNMATuYXkpmS7f8">Google Form を開く</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。</p>
+    </div>
+  </footer>
+</body>
+</html>

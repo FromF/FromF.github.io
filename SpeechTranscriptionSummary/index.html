@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="文字起こしメーカーのサポートページです。使い方、よくある質問、お問い合わせ先を掲載しています。">
+  <title>文字起こしメーカー サポート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #647084;
+      --line: #dce2ea;
+      --primary: #1768ac;
+      --primary-dark: #0d4f86;
+      --accent: #00a676;
+      --warning: #a45b00;
+      --shadow: 0 18px 48px rgba(23, 32, 51, 0.10);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", Meiryo, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: #e9f2f8;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    .notice {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+      padding: 18px 20px;
+      background: #fff8e8;
+      border: 1px solid #f2d99b;
+      border-radius: 8px;
+      color: #47330c;
+    }
+
+    .notice strong {
+      color: var(--warning);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .card {
+      min-height: 100%;
+      padding: 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.06);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card p:last-child,
+    .faq p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section {
+      margin-bottom: 36px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      margin-bottom: 16px;
+      font-size: 1.55rem;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    ol,
+    ul {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .faq {
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .faq h3 {
+      margin-bottom: 6px;
+      font-size: 1.04rem;
+      letter-spacing: 0;
+    }
+
+    .support-box {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 28px;
+      background: #eef8f4;
+      border: 1px solid #b9dfd0;
+      border-radius: 8px;
+    }
+
+    .support-box h2 {
+      margin-bottom: 8px;
+      font-size: 1.45rem;
+      letter-spacing: 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      min-height: 48px;
+      padding: 12px 20px;
+      color: #ffffff;
+      background: var(--primary);
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .hero-inner {
+        grid-template-columns: 72px minmax(0, 1fr);
+        gap: 16px;
+        padding: 32px 18px 30px;
+      }
+
+      .app-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 17px;
+      }
+
+      .container {
+        padding: 24px 18px 40px;
+      }
+
+      .grid,
+      .support-box {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .support-box {
+        padding: 22px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="app-icon" src="image/appicon.png" alt="文字起こしメーカーのアイコン">
+      <div>
+        <h1>文字起こしメーカー サポート</h1>
+        <p class="lead">音声ファイルの取り込み、文字起こし、話者整理、要約に関するヘルプとお問い合わせ窓口です。</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="notice">
+      <div>
+        <strong>重要な内容は必ず確認してください。</strong>
+        文字起こしや要約の結果は、音声の明瞭さ、話者の重なり、端末やOSの状態によって変わる場合があります。
+      </div>
+    </div>
+
+    <section class="grid" aria-label="主なサポート項目">
+      <article class="card">
+        <h2>音声を取り込む</h2>
+        <p>インポートタブから audio、m4a、mp3、wav 形式の音声ファイルを選択し、アプリ内に保存できます。</p>
+      </article>
+      <article class="card">
+        <h2>文字起こしする</h2>
+        <p>文字起こしタブで保存済み音声を選択し、詳細画面から文字起こしを実行できます。</p>
+      </article>
+      <article class="card">
+        <h2>要約を作成する</h2>
+        <p>対応環境では、文字起こし結果から要点、決定事項、ToDo、一文要約を作成できます。</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>こんな使い方を想定しています</h2>
+      <p>文字起こしメーカーは、すでにICレコーダーやボイスメモアプリで録音している方が、保存済みの音声に文字起こしと要約機能を追加するためのアプリとして制作しています。</p>
+      <ul>
+        <li>会議や打ち合わせを録音し、あとから内容をテキストで確認したい</li>
+        <li>ボイスメモに残したアイデアや作業メモを、短い要約として見返したい</li>
+        <li>インタビューやヒアリング音声から、要点やToDoを整理したい</li>
+        <li>録音済みの音声ファイルをまとめて管理し、必要なものだけ文字起こししたい</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>基本的な使い方</h2>
+      <ol>
+        <li>「インポート」タブで音声ファイルを選択します。</li>
+        <li>必要に応じて音声をプレビュー再生し、「取り込む」をタップします。</li>
+        <li>「文字起こし」タブで取り込み済み音声を選択します。</li>
+        <li>詳細画面で「文字起こし実行」をタップします。</li>
+        <li>処理完了後、文字起こし結果、話者整理結果、要約結果を確認します。</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>よくある質問</h2>
+      <div class="faq">
+        <h3>文字起こしに時間がかかります。</h3>
+        <p>音声の長さ、端末性能、音声認識モデルの準備状況によって処理時間が変わります。初回利用時やモデル未導入時には、準備に時間がかかる場合があります。</p>
+      </div>
+      <div class="faq">
+        <h3>要約や話者整理が使えません。</h3>
+        <p>要約と話者整理は Foundation Models の利用条件に依存します。端末、OS、Apple Intelligence の設定、モデルの準備状況をご確認ください。</p>
+      </div>
+      <div class="faq">
+        <h3>文字起こしの精度を上げるにはどうすればよいですか。</h3>
+        <p>話者同士の声が重ならない音声、雑音の少ない音声、音量が十分な音声を利用すると、結果が安定しやすくなります。</p>
+      </div>
+      <div class="faq">
+        <h3>取り込んだ音声や結果を削除できますか。</h3>
+        <p>文字起こしタブの一覧でスワイプ削除するか、詳細画面の削除操作から、取り込み済み音声と処理結果を削除できます。</p>
+      </div>
+    </section>
+
+    <section class="support-box" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title">お問い合わせ</h2>
+        <p>不具合の報告、ご質問、ご要望はGoogleフォームからお送りください。確認に必要な場合は、端末名、OSバージョン、アプリのバージョン、発生した操作を添えてください。</p>
+      </div>
+      <a class="button" href="https://forms.gle/7cTxt88bSyhwN6EG8" target="_blank" rel="noopener noreferrer">フォームを開く</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © 2026 Haruhito Fuji. All rights reserved.</p>
+  </footer>
+</body>
+</html>

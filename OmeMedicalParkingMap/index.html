@@ -324,129 +324,918 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="app-mark">
-        <img class="app-icon" src="image/appicon.png" alt="青梅メディカル駐車場マップのアプリアイコン">
+        <img class="app-icon" src="image/appicon.png" alt="青梅メディカル駐車場マップのアプリアイコン" data-i18n-attr="alt:appIconAlt">
         <div>
-          <p class="eyebrow">サポートサイト</p>
-          <strong>青梅メディカル駐車場マップ</strong>
+          <p class="eyebrow" data-i18n="eyebrow">サポートサイト</p>
+          <strong data-i18n="appName">青梅メディカル駐車場マップ</strong>
         </div>
       </div>
-      <h1>病院周辺の駐車場確認を、すばやく地図で。</h1>
-      <p class="lead">市立青梅総合医療センター周辺の対象駐車場を地図上に表示し、満空情報画像から判定した状態を確認できる iPhone / iPad アプリです。</p>
+      <h1 data-i18n="heroTitle">病院周辺の駐車場確認を、すばやく地図で。</h1>
+      <p class="lead" data-i18n="heroLead">市立青梅総合医療センター周辺の対象駐車場を地図上に表示し、満空情報画像から判定した状態を確認できる iPhone / iPad アプリです。</p>
       <div class="actions">
-        <a class="app-store-link" href="https://apps.apple.com/us/app/%E9%9D%92%E6%A2%85%E3%83%A1%E3%83%87%E3%82%A3%E3%82%AB%E3%83%AB%E9%A7%90%E8%BB%8A%E5%A0%B4%E3%83%9E%E3%83%83%E3%83%97/id6764748376" target="_blank" rel="noopener noreferrer" aria-label="App Storeで青梅メディカル駐車場マップをダウンロード">
-          <img class="app-store-badge" src="image/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store">
+        <a class="app-store-link" href="https://apps.apple.com/us/app/%E9%9D%92%E6%A2%85%E3%83%A1%E3%83%87%E3%82%A3%E3%82%AB%E3%83%AB%E9%A7%90%E8%BB%8A%E5%A0%B4%E3%83%9E%E3%83%83%E3%83%97/id6764748376" target="_blank" rel="noopener noreferrer" aria-label="App Storeで青梅メディカル駐車場マップをダウンロード" data-i18n-attr="aria-label:appStoreAria">
+          <img class="app-store-badge" src="image/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" data-i18n-attr="alt:appStoreAlt">
         </a>
-        <a class="button" href="#contact">問い合わせる</a>
-        <a class="button secondary" href="#faq">よくある質問</a>
+        <a class="button" href="#contact" data-i18n="contactButton">問い合わせる</a>
+        <a class="button secondary" href="#faq" data-i18n="faqButton">よくある質問</a>
       </div>
     </div>
-    <nav aria-label="ページ内ナビゲーション">
+    <nav aria-label="ページ内ナビゲーション" data-i18n-attr="aria-label:pageNav">
       <div class="nav-inner">
-        <a href="#about">概要</a>
-        <a href="#status">表示の見方</a>
-        <a href="#faq">FAQ</a>
-        <a href="#privacy">プライバシー</a>
-        <a href="#contact">問い合わせ</a>
+        <a href="#about" data-i18n="navAbout">概要</a>
+        <a href="#status" data-i18n="navStatus">表示の見方</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#privacy" data-i18n="navPrivacy">プライバシー</a>
+        <a href="#contact" data-i18n="navContact">問い合わせ</a>
       </div>
     </nav>
   </header>
 
   <main>
     <section id="about">
-      <h2>概要</h2>
-      <p class="section-copy">青梅メディカル駐車場マップは、市立青梅総合医療センター周辺の駐車場位置と満空状態を確認するためのアプリです。</p>
+      <h2 data-i18n="aboutTitle">概要</h2>
+      <p class="section-copy" data-i18n="aboutCopy">青梅メディカル駐車場マップは、市立青梅総合医療センター周辺の駐車場位置と満空状態を確認するためのアプリです。</p>
       <div class="grid">
         <article class="panel">
-          <h3>地図で確認</h3>
-          <p>病院周辺の対象駐車場を MapKit の地図上に表示します。</p>
+          <h3 data-i18n="aboutMapTitle">地図で確認</h3>
+          <p data-i18n="aboutMapCopy">病院周辺の対象駐車場を MapKit の地図上に表示します。</p>
         </article>
         <article class="panel">
-          <h3>満空状態を表示</h3>
-          <p>外部の駐車状況画像を取得し、端末上の文字認識で状態を判定します。</p>
+          <h3 data-i18n="aboutStatusTitle">満空状態を表示</h3>
+          <p data-i18n="aboutStatusCopy">外部の駐車状況画像を取得し、端末上の文字認識で状態を判定します。</p>
         </article>
         <article class="panel">
-          <h3>現在地に対応</h3>
-          <p>位置情報の許可後、現在地を地図上に表示できます。</p>
+          <h3 data-i18n="aboutLocationTitle">現在地に対応</h3>
+          <p data-i18n="aboutLocationCopy">位置情報の許可後、現在地を地図上に表示できます。</p>
         </article>
       </div>
     </section>
 
     <section id="status">
-      <h2>表示の見方</h2>
-      <p class="section-copy">地図上のアノテーションは、駐車場ごとの状態を短い記号で表示します。</p>
+      <h2 data-i18n="statusTitle">表示の見方</h2>
+      <p class="section-copy" data-i18n="statusCopy">地図上のアノテーションは、駐車場ごとの状態を短い記号で表示します。</p>
       <div class="status-row">
         <div class="status">
-          <span class="badge available">空</span>
+          <span class="badge available" data-i18n="availableShort">空</span>
           <div>
-            <h3>空車</h3>
-            <p>駐車可能と判定された状態です。</p>
+            <h3 data-i18n="availableTitle">空車</h3>
+            <p data-i18n="availableCopy">駐車可能と判定された状態です。</p>
           </div>
         </div>
         <div class="status">
-          <span class="badge full">満</span>
+          <span class="badge full" data-i18n="fullShort">満</span>
           <div>
-            <h3>満車</h3>
-            <p>満車と判定された状態です。</p>
+            <h3 data-i18n="fullTitle">満車</h3>
+            <p data-i18n="fullCopy">満車と判定された状態です。</p>
           </div>
         </div>
         <div class="status">
           <span class="badge unknown">?</span>
           <div>
-            <h3>確認中または判定不可</h3>
-            <p>画像の取得失敗、通信状況、文字認識結果などにより状態を確認できない場合に表示されます。</p>
+            <h3 data-i18n="unknownTitle">確認中または判定不可</h3>
+            <p data-i18n="unknownCopy">画像の取得失敗、通信状況、文字認識結果などにより状態を確認できない場合に表示されます。</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="faq">
-      <h2>よくある質問</h2>
+      <h2 data-i18n="faqTitle">よくある質問</h2>
       <div class="faq-list">
         <article class="faq">
-          <h3>駐車場情報が更新されない場合はどうすればよいですか。</h3>
-          <p>画面右上の更新ボタンを押してください。通信状況や情報提供元の状態によって、取得に時間がかかる場合があります。</p>
+          <h3 data-i18n="faqRefreshQuestion">駐車場情報が更新されない場合はどうすればよいですか。</h3>
+          <p data-i18n="faqRefreshAnswer">画面右上の更新ボタンを押してください。通信状況や情報提供元の状態によって、取得に時間がかかる場合があります。</p>
         </article>
         <article class="faq">
-          <h3>位置情報は何に使われますか。</h3>
-          <p>現在地を地図上に表示するためだけに使用します。アプリ独自のサーバーへ位置情報を送信したり保存したりしません。</p>
+          <h3 data-i18n="faqLocationQuestion">位置情報は何に使われますか。</h3>
+          <p data-i18n="faqLocationAnswer">現在地を地図上に表示するためだけに使用します。アプリ独自のサーバーへ位置情報を送信したり保存したりしません。</p>
         </article>
         <article class="faq">
-          <h3>表示された満空状態は必ず正確ですか。</h3>
-          <p>駐車状況画像をもとに端末上で判定しているため、画像内容や通信状況、文字認識結果によって実際の状況と異なる場合があります。現地案内や公式情報もあわせて確認してください。</p>
+          <h3 data-i18n="faqAccuracyQuestion">表示された満空状態は必ず正確ですか。</h3>
+          <p data-i18n="faqAccuracyAnswer">駐車状況画像をもとに端末上で判定しているため、画像内容や通信状況、文字認識結果によって実際の状況と異なる場合があります。現地案内や公式情報もあわせて確認してください。</p>
         </article>
         <article class="faq">
-          <h3>市立青梅総合医療センターの公式アプリですか。</h3>
-          <p>いいえ。本アプリは市立青梅総合医療センターの公式アプリではありません。</p>
+          <h3 data-i18n="faqOfficialQuestion">市立青梅総合医療センターの公式アプリですか。</h3>
+          <p data-i18n="faqOfficialAnswer">いいえ。本アプリは市立青梅総合医療センターの公式アプリではありません。</p>
         </article>
       </div>
     </section>
 
     <section id="privacy">
-      <h2>プライバシー</h2>
+      <h2 data-i18n="privacyTitle">プライバシー</h2>
       <div class="notice">
-        <p>本アプリは、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。</p>
+        <p data-i18n="privacyNotice">本アプリは、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。</p>
       </div>
-      <ul class="meta-list" aria-label="プライバシー項目">
-        <li><strong>位置情報</strong>現在地を地図上に表示するために使用します。</li>
-        <li><strong>外部通信</strong>駐車状況画像を取得するため、外部 URL へ通信します。</li>
-        <li><strong>文字認識</strong>取得した画像は端末上で満空状態の判定に使用します。</li>
-        <li><strong>トラッキング</strong>広告や他社アプリ・Webサイト横断の追跡には使用しません。</li>
+      <ul class="meta-list" aria-label="プライバシー項目" data-i18n-attr="aria-label:privacyItems">
+        <li><strong data-i18n="privacyLocationTitle">位置情報</strong><span data-i18n="privacyLocationCopy">現在地を地図上に表示するために使用します。</span></li>
+        <li><strong data-i18n="privacyNetworkTitle">外部通信</strong><span data-i18n="privacyNetworkCopy">駐車状況画像を取得するため、外部 URL へ通信します。</span></li>
+        <li><strong data-i18n="privacyOcrTitle">文字認識</strong><span data-i18n="privacyOcrCopy">取得した画像は端末上で満空状態の判定に使用します。</span></li>
+        <li><strong data-i18n="privacyTrackingTitle">トラッキング</strong><span data-i18n="privacyTrackingCopy">広告や他社アプリ・Webサイト横断の追跡には使用しません。</span></li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>問い合わせ</h2>
-      <p class="section-copy">不具合報告やサポート依頼は、Google Form からご連絡ください。問い合わせ時は、利用端末、iOS バージョン、発生した操作、表示内容を添えていただくと確認がスムーズです。</p>
+      <h2 data-i18n="contactTitle">問い合わせ</h2>
+      <p class="section-copy" data-i18n="contactCopy">不具合報告やサポート依頼は、Google Form からご連絡ください。問い合わせ時は、利用端末、iOS バージョン、発生した操作、表示内容を添えていただくと確認がスムーズです。</p>
       <div class="actions">
-        <a class="button" href="https://forms.gle/hxYNMATuYXkpmS7f8">Google Form を開く</a>
+        <a class="button" href="https://forms.gle/hxYNMATuYXkpmS7f8" data-i18n="googleFormButton">Google Form を開く</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <p>青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。</p>
+      <p data-i18n="footerDisclaimer">青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。</p>
     </div>
   </footer>
+  <script>
+    const translations = {
+      ja: {
+        pageTitle: "青梅メディカル駐車場マップ サポート",
+        metaDescription: "青梅メディカル駐車場マップのサポートページです。使い方、よくある質問、プライバシー、問い合わせ先を掲載しています。",
+        appIconAlt: "青梅メディカル駐車場マップのアプリアイコン",
+        appStoreAria: "App Storeで青梅メディカル駐車場マップをダウンロード",
+        appStoreAlt: "Download on the App Store",
+        pageNav: "ページ内ナビゲーション",
+        privacyItems: "プライバシー項目",
+        eyebrow: "サポートサイト",
+        appName: "青梅メディカル駐車場マップ",
+        heroTitle: "病院周辺の駐車場確認を、すばやく地図で。",
+        heroLead: "市立青梅総合医療センター周辺の対象駐車場を地図上に表示し、満空情報画像から判定した状態を確認できる iPhone / iPad アプリです。",
+        contactButton: "問い合わせる",
+        faqButton: "よくある質問",
+        navAbout: "概要",
+        navStatus: "表示の見方",
+        navFaq: "FAQ",
+        navPrivacy: "プライバシー",
+        navContact: "問い合わせ",
+        aboutTitle: "概要",
+        aboutCopy: "青梅メディカル駐車場マップは、市立青梅総合医療センター周辺の駐車場位置と満空状態を確認するためのアプリです。",
+        aboutMapTitle: "地図で確認",
+        aboutMapCopy: "病院周辺の対象駐車場を MapKit の地図上に表示します。",
+        aboutStatusTitle: "満空状態を表示",
+        aboutStatusCopy: "外部の駐車状況画像を取得し、端末上の文字認識で状態を判定します。",
+        aboutLocationTitle: "現在地に対応",
+        aboutLocationCopy: "位置情報の許可後、現在地を地図上に表示できます。",
+        statusTitle: "表示の見方",
+        statusCopy: "地図上のアノテーションは、駐車場ごとの状態を短い記号で表示します。",
+        availableShort: "空",
+        availableTitle: "空車",
+        availableCopy: "駐車可能と判定された状態です。",
+        fullShort: "満",
+        fullTitle: "満車",
+        fullCopy: "満車と判定された状態です。",
+        unknownTitle: "確認中または判定不可",
+        unknownCopy: "画像の取得失敗、通信状況、文字認識結果などにより状態を確認できない場合に表示されます。",
+        faqTitle: "よくある質問",
+        faqRefreshQuestion: "駐車場情報が更新されない場合はどうすればよいですか。",
+        faqRefreshAnswer: "画面右上の更新ボタンを押してください。通信状況や情報提供元の状態によって、取得に時間がかかる場合があります。",
+        faqLocationQuestion: "位置情報は何に使われますか。",
+        faqLocationAnswer: "現在地を地図上に表示するためだけに使用します。アプリ独自のサーバーへ位置情報を送信したり保存したりしません。",
+        faqAccuracyQuestion: "表示された満空状態は必ず正確ですか。",
+        faqAccuracyAnswer: "駐車状況画像をもとに端末上で判定しているため、画像内容や通信状況、文字認識結果によって実際の状況と異なる場合があります。現地案内や公式情報もあわせて確認してください。",
+        faqOfficialQuestion: "市立青梅総合医療センターの公式アプリですか。",
+        faqOfficialAnswer: "いいえ。本アプリは市立青梅総合医療センターの公式アプリではありません。",
+        privacyTitle: "プライバシー",
+        privacyNotice: "本アプリは、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。",
+        privacyLocationTitle: "位置情報",
+        privacyLocationCopy: "現在地を地図上に表示するために使用します。",
+        privacyNetworkTitle: "外部通信",
+        privacyNetworkCopy: "駐車状況画像を取得するため、外部 URL へ通信します。",
+        privacyOcrTitle: "文字認識",
+        privacyOcrCopy: "取得した画像は端末上で満空状態の判定に使用します。",
+        privacyTrackingTitle: "トラッキング",
+        privacyTrackingCopy: "広告や他社アプリ・Webサイト横断の追跡には使用しません。",
+        contactTitle: "問い合わせ",
+        contactCopy: "不具合報告やサポート依頼は、Google Form からご連絡ください。問い合わせ時は、利用端末、iOS バージョン、発生した操作、表示内容を添えていただくと確認がスムーズです。",
+        googleFormButton: "Google Form を開く",
+        footerDisclaimer: "青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。"
+      },
+      en: {
+        pageTitle: "Ome Medical Center Parking Map Support",
+        metaDescription: "Support page for Ome Medical Center Parking Map, with usage help, FAQ, privacy information, and contact details.",
+        appIconAlt: "Ome Medical Center Parking Map app icon",
+        appStoreAria: "Download Ome Medical Center Parking Map on the App Store",
+        appStoreAlt: "Download on the App Store",
+        pageNav: "Page navigation",
+        privacyItems: "Privacy items",
+        eyebrow: "Support Site",
+        appName: "Ome Medical Center Parking Map",
+        heroTitle: "Check parking near the hospital quickly on a map.",
+        heroLead: "An iPhone and iPad app that shows supported parking lots around Ome Municipal General Medical Center on a map and displays status estimated from parking availability images.",
+        contactButton: "Contact",
+        faqButton: "FAQ",
+        navAbout: "Overview",
+        navStatus: "Status Guide",
+        navFaq: "FAQ",
+        navPrivacy: "Privacy",
+        navContact: "Contact",
+        aboutTitle: "Overview",
+        aboutCopy: "Ome Medical Center Parking Map helps you check parking locations and availability around Ome Municipal General Medical Center.",
+        aboutMapTitle: "Check on a Map",
+        aboutMapCopy: "Supported parking lots around the hospital are shown on a MapKit map.",
+        aboutStatusTitle: "Availability Status",
+        aboutStatusCopy: "The app retrieves external parking status images and estimates availability with on-device text recognition.",
+        aboutLocationTitle: "Current Location",
+        aboutLocationCopy: "After location permission is granted, your current location can be shown on the map.",
+        statusTitle: "Status Guide",
+        statusCopy: "Map annotations show each parking lot's status with a short symbol.",
+        availableShort: "A",
+        availableTitle: "Available",
+        availableCopy: "The parking lot is estimated to have available spaces.",
+        fullShort: "F",
+        fullTitle: "Full",
+        fullCopy: "The parking lot is estimated to be full.",
+        unknownTitle: "Checking or Unavailable",
+        unknownCopy: "Shown when the status cannot be confirmed because of image retrieval failure, network conditions, or text recognition results.",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "What should I do if parking information does not update?",
+        faqRefreshAnswer: "Tap the refresh button in the upper-right corner. Retrieval may take time depending on network conditions or the status provider.",
+        faqLocationQuestion: "What is location information used for?",
+        faqLocationAnswer: "It is used only to show your current location on the map. The app does not send or store your location on its own server.",
+        faqAccuracyQuestion: "Is the displayed availability always accurate?",
+        faqAccuracyAnswer: "Status is estimated on device from parking status images, so it may differ from the actual situation depending on image content, network conditions, or text recognition results. Please also check on-site guidance and official information.",
+        faqOfficialQuestion: "Is this an official app from Ome Municipal General Medical Center?",
+        faqOfficialAnswer: "No. This app is not an official app from Ome Municipal General Medical Center.",
+        privacyTitle: "Privacy",
+        privacyNotice: "This app does not use account registration, login, ad SDKs, or analytics SDKs. It asks for location permission to show your current location, but it does not store your location or send it to an app-owned server.",
+        privacyLocationTitle: "Location",
+        privacyLocationCopy: "Used to show your current location on the map.",
+        privacyNetworkTitle: "External Communication",
+        privacyNetworkCopy: "The app connects to external URLs to retrieve parking status images.",
+        privacyOcrTitle: "Text Recognition",
+        privacyOcrCopy: "Retrieved images are used on device to estimate parking availability.",
+        privacyTrackingTitle: "Tracking",
+        privacyTrackingCopy: "Not used for advertising or tracking across third-party apps and websites.",
+        contactTitle: "Contact",
+        contactCopy: "For bug reports or support requests, please contact us through the Google Form. Including your device, iOS version, steps taken, and what appeared on screen helps us investigate smoothly.",
+        googleFormButton: "Open Google Form",
+        footerDisclaimer: "Ome Medical Center Parking Map is not an official app from Ome Municipal General Medical Center. When using parking lots, please prioritize on-site guidance and official information."
+      },
+      "zh-Hans": {
+        pageTitle: "青梅医疗中心停车地图 支持",
+        metaDescription: "青梅医疗中心停车地图的支持页面，包含使用帮助、常见问题、隐私信息和联系方式。",
+        appIconAlt: "青梅医疗中心停车地图 App 图标",
+        appStoreAria: "在 App Store 下载青梅医疗中心停车地图",
+        appStoreAlt: "在 App Store 下载",
+        pageNav: "页面导航",
+        privacyItems: "隐私项目",
+        eyebrow: "支持网站",
+        appName: "青梅医疗中心停车地图",
+        heroTitle: "在地图上快速查看医院周边停车场。",
+        heroLead: "这是一款 iPhone / iPad App，可在地图上显示青梅市立综合医疗中心周边的指定停车场，并显示根据满空信息图片判定的状态。",
+        contactButton: "联系我们",
+        faqButton: "常见问题",
+        navAbout: "概要",
+        navStatus: "显示说明",
+        navFaq: "FAQ",
+        navPrivacy: "隐私",
+        navContact: "联系",
+        aboutTitle: "概要",
+        aboutCopy: "青梅医疗中心停车地图用于查看青梅市立综合医疗中心周边停车场的位置和空满状态。",
+        aboutMapTitle: "在地图上查看",
+        aboutMapCopy: "在 MapKit 地图上显示医院周边的指定停车场。",
+        aboutStatusTitle: "显示空满状态",
+        aboutStatusCopy: "获取外部停车状况图片，并通过设备端文字识别判定状态。",
+        aboutLocationTitle: "支持当前位置",
+        aboutLocationCopy: "允许使用位置信息后，可以在地图上显示当前位置。",
+        statusTitle: "显示说明",
+        statusCopy: "地图上的标注会用简短符号显示每个停车场的状态。",
+        availableShort: "空",
+        availableTitle: "有空位",
+        availableCopy: "表示判定为可以停车的状态。",
+        fullShort: "满",
+        fullTitle: "已满",
+        fullCopy: "表示判定为满车的状态。",
+        unknownTitle: "确认中或无法判定",
+        unknownCopy: "当图片获取失败、通信状况或文字识别结果导致无法确认状态时显示。",
+        faqTitle: "常见问题",
+        faqRefreshQuestion: "停车场信息没有更新时该怎么办？",
+        faqRefreshAnswer: "请点击画面右上角的刷新按钮。根据通信状况或信息提供方状态，获取可能需要一些时间。",
+        faqLocationQuestion: "位置信息会用于什么？",
+        faqLocationAnswer: "仅用于在地图上显示当前位置。App 不会向自有服务器发送或保存位置信息。",
+        faqAccuracyQuestion: "显示的空满状态一定准确吗？",
+        faqAccuracyAnswer: "状态是基于停车状况图片在设备端判定的，因此可能因图片内容、通信状况或文字识别结果而与实际情况不同。请同时确认现场指引和官方信息。",
+        faqOfficialQuestion: "这是青梅市立综合医疗中心的官方 App 吗？",
+        faqOfficialAnswer: "不是。本 App 不是青梅市立综合医疗中心的官方 App。",
+        privacyTitle: "隐私",
+        privacyNotice: "本 App 不使用账号注册、登录、广告 SDK 或分析 SDK。为显示当前位置会请求位置权限，但不会保存位置信息或发送到自有服务器。",
+        privacyLocationTitle: "位置信息",
+        privacyLocationCopy: "用于在地图上显示当前位置。",
+        privacyNetworkTitle: "外部通信",
+        privacyNetworkCopy: "为获取停车状况图片，会访问外部 URL。",
+        privacyOcrTitle: "文字识别",
+        privacyOcrCopy: "获取的图片会在设备端用于判定停车空满状态。",
+        privacyTrackingTitle: "跟踪",
+        privacyTrackingCopy: "不会用于广告或跨第三方 App 与网站的跟踪。",
+        contactTitle: "联系",
+        contactCopy: "如需报告问题或请求支持，请通过 Google Form 联系我们。请附上使用设备、iOS 版本、发生问题时的操作和显示内容，以便顺利确认。",
+        googleFormButton: "打开 Google Form",
+        footerDisclaimer: "青梅医疗中心停车地图不是青梅市立综合医疗中心的官方 App。实际使用停车场时，请优先遵循现场指引和官方信息。"
+      },
+      "zh-Hant": {
+        pageTitle: "青梅醫療中心停車地圖 支援",
+        metaDescription: "青梅醫療中心停車地圖的支援頁面，包含使用說明、常見問題、隱私資訊和聯絡方式。",
+        appIconAlt: "青梅醫療中心停車地圖 App 圖示",
+        appStoreAria: "在 App Store 下載青梅醫療中心停車地圖",
+        appStoreAlt: "在 App Store 下載",
+        pageNav: "頁面導覽",
+        privacyItems: "隱私項目",
+        eyebrow: "支援網站",
+        appName: "青梅醫療中心停車地圖",
+        heroTitle: "在地圖上快速查看醫院周邊停車場。",
+        heroLead: "這是一款 iPhone / iPad App，可在地圖上顯示青梅市立綜合醫療中心周邊的指定停車場，並顯示根據滿空資訊圖片判定的狀態。",
+        contactButton: "聯絡我們",
+        faqButton: "常見問題",
+        navAbout: "概要",
+        navStatus: "顯示說明",
+        navFaq: "FAQ",
+        navPrivacy: "隱私",
+        navContact: "聯絡",
+        aboutTitle: "概要",
+        aboutCopy: "青梅醫療中心停車地圖用於查看青梅市立綜合醫療中心周邊停車場的位置和空滿狀態。",
+        aboutMapTitle: "在地圖上查看",
+        aboutMapCopy: "在 MapKit 地圖上顯示醫院周邊的指定停車場。",
+        aboutStatusTitle: "顯示空滿狀態",
+        aboutStatusCopy: "取得外部停車狀況圖片，並透過裝置端文字辨識判定狀態。",
+        aboutLocationTitle: "支援目前位置",
+        aboutLocationCopy: "允許使用位置資訊後，可以在地圖上顯示目前位置。",
+        statusTitle: "顯示說明",
+        statusCopy: "地圖上的標註會用簡短符號顯示每個停車場的狀態。",
+        availableShort: "空",
+        availableTitle: "有空位",
+        availableCopy: "表示判定為可以停車的狀態。",
+        fullShort: "滿",
+        fullTitle: "已滿",
+        fullCopy: "表示判定為滿車的狀態。",
+        unknownTitle: "確認中或無法判定",
+        unknownCopy: "當圖片取得失敗、通訊狀況或文字辨識結果導致無法確認狀態時顯示。",
+        faqTitle: "常見問題",
+        faqRefreshQuestion: "停車場資訊沒有更新時該怎麼辦？",
+        faqRefreshAnswer: "請點選畫面右上角的重新整理按鈕。根據通訊狀況或資訊提供方狀態，取得可能需要一些時間。",
+        faqLocationQuestion: "位置資訊會用於什麼？",
+        faqLocationAnswer: "僅用於在地圖上顯示目前位置。App 不會向自有伺服器傳送或儲存位置資訊。",
+        faqAccuracyQuestion: "顯示的空滿狀態一定準確嗎？",
+        faqAccuracyAnswer: "狀態是基於停車狀況圖片在裝置端判定的，因此可能因圖片內容、通訊狀況或文字辨識結果而與實際情況不同。請同時確認現場指引和官方資訊。",
+        faqOfficialQuestion: "這是青梅市立綜合醫療中心的官方 App 嗎？",
+        faqOfficialAnswer: "不是。本 App 不是青梅市立綜合醫療中心的官方 App。",
+        privacyTitle: "隱私",
+        privacyNotice: "本 App 不使用帳號註冊、登入、廣告 SDK 或分析 SDK。為顯示目前位置會要求位置權限，但不會儲存位置資訊或傳送到自有伺服器。",
+        privacyLocationTitle: "位置資訊",
+        privacyLocationCopy: "用於在地圖上顯示目前位置。",
+        privacyNetworkTitle: "外部通訊",
+        privacyNetworkCopy: "為取得停車狀況圖片，會連線到外部 URL。",
+        privacyOcrTitle: "文字辨識",
+        privacyOcrCopy: "取得的圖片會在裝置端用於判定停車空滿狀態。",
+        privacyTrackingTitle: "追蹤",
+        privacyTrackingCopy: "不會用於廣告或跨第三方 App 與網站的追蹤。",
+        contactTitle: "聯絡",
+        contactCopy: "如需回報問題或請求支援，請透過 Google Form 聯絡我們。請附上使用裝置、iOS 版本、發生問題時的操作和顯示內容，以便順利確認。",
+        googleFormButton: "開啟 Google Form",
+        footerDisclaimer: "青梅醫療中心停車地圖不是青梅市立綜合醫療中心的官方 App。實際使用停車場時，請優先遵循現場指引和官方資訊。"
+      },
+      ko: {
+        pageTitle: "오메 의료센터 주차장 지도 지원",
+        metaDescription: "오메 의료센터 주차장 지도의 지원 페이지입니다. 사용 방법, FAQ, 개인정보 보호, 문의처를 안내합니다.",
+        appIconAlt: "오메 의료센터 주차장 지도 앱 아이콘",
+        appStoreAria: "App Store에서 오메 의료센터 주차장 지도 다운로드",
+        appStoreAlt: "App Store에서 다운로드",
+        pageNav: "페이지 내비게이션",
+        privacyItems: "개인정보 보호 항목",
+        eyebrow: "지원 사이트",
+        appName: "오메 의료센터 주차장 지도",
+        heroTitle: "병원 주변 주차장을 지도에서 빠르게 확인하세요.",
+        heroLead: "오메 시립 종합의료센터 주변 대상 주차장을 지도에 표시하고, 주차 가능 정보 이미지에서 판정한 상태를 확인할 수 있는 iPhone / iPad 앱입니다.",
+        contactButton: "문의하기",
+        faqButton: "자주 묻는 질문",
+        navAbout: "개요",
+        navStatus: "표시 안내",
+        navFaq: "FAQ",
+        navPrivacy: "개인정보 보호",
+        navContact: "문의",
+        aboutTitle: "개요",
+        aboutCopy: "오메 의료센터 주차장 지도는 오메 시립 종합의료센터 주변 주차장 위치와 만차 여부를 확인하기 위한 앱입니다.",
+        aboutMapTitle: "지도에서 확인",
+        aboutMapCopy: "병원 주변 대상 주차장을 MapKit 지도에 표시합니다.",
+        aboutStatusTitle: "주차 상태 표시",
+        aboutStatusCopy: "외부 주차 상황 이미지를 가져와 기기 내 문자 인식으로 상태를 판정합니다.",
+        aboutLocationTitle: "현재 위치 지원",
+        aboutLocationCopy: "위치 정보 허용 후 현재 위치를 지도에 표시할 수 있습니다.",
+        statusTitle: "표시 안내",
+        statusCopy: "지도 주석은 각 주차장의 상태를 짧은 기호로 표시합니다.",
+        availableShort: "가",
+        availableTitle: "주차 가능",
+        availableCopy: "주차 가능으로 판정된 상태입니다.",
+        fullShort: "만",
+        fullTitle: "만차",
+        fullCopy: "만차로 판정된 상태입니다.",
+        unknownTitle: "확인 중 또는 판정 불가",
+        unknownCopy: "이미지 가져오기 실패, 통신 상태, 문자 인식 결과 등으로 상태를 확인할 수 없을 때 표시됩니다.",
+        faqTitle: "자주 묻는 질문",
+        faqRefreshQuestion: "주차장 정보가 업데이트되지 않으면 어떻게 하나요?",
+        faqRefreshAnswer: "화면 오른쪽 위의 새로고침 버튼을 눌러 주세요. 통신 상태나 정보 제공처의 상태에 따라 가져오기에 시간이 걸릴 수 있습니다.",
+        faqLocationQuestion: "위치 정보는 어디에 사용되나요?",
+        faqLocationAnswer: "현재 위치를 지도에 표시하는 데만 사용됩니다. 앱 자체 서버로 위치 정보를 보내거나 저장하지 않습니다.",
+        faqAccuracyQuestion: "표시된 주차 상태는 항상 정확한가요?",
+        faqAccuracyAnswer: "주차 상황 이미지를 바탕으로 기기에서 판정하므로 이미지 내용, 통신 상태, 문자 인식 결과에 따라 실제 상황과 다를 수 있습니다. 현장 안내와 공식 정보도 함께 확인해 주세요.",
+        faqOfficialQuestion: "오메 시립 종합의료센터의 공식 앱인가요?",
+        faqOfficialAnswer: "아니요. 이 앱은 오메 시립 종합의료센터의 공식 앱이 아닙니다.",
+        privacyTitle: "개인정보 보호",
+        privacyNotice: "이 앱은 계정 등록, 로그인, 광고 SDK, 분석 SDK를 사용하지 않습니다. 현재 위치 표시를 위해 위치 정보 권한을 요청하지만, 위치 정보를 저장하거나 자체 서버로 전송하지 않습니다.",
+        privacyLocationTitle: "위치 정보",
+        privacyLocationCopy: "현재 위치를 지도에 표시하기 위해 사용합니다.",
+        privacyNetworkTitle: "외부 통신",
+        privacyNetworkCopy: "주차 상황 이미지를 가져오기 위해 외부 URL과 통신합니다.",
+        privacyOcrTitle: "문자 인식",
+        privacyOcrCopy: "가져온 이미지는 기기 내에서 주차 상태 판정에 사용합니다.",
+        privacyTrackingTitle: "추적",
+        privacyTrackingCopy: "광고나 타사 앱 및 웹사이트 간 추적에는 사용하지 않습니다.",
+        contactTitle: "문의",
+        contactCopy: "오류 신고나 지원 요청은 Google Form으로 연락해 주세요. 사용 기기, iOS 버전, 발생한 조작, 표시 내용을 함께 보내 주시면 확인이 원활합니다.",
+        googleFormButton: "Google Form 열기",
+        footerDisclaimer: "오메 의료센터 주차장 지도는 오메 시립 종합의료센터의 공식 앱이 아닙니다. 실제 주차장 이용 시에는 현장 안내와 공식 정보를 우선해 주세요."
+      },
+      hi: {
+        pageTitle: "ओमे मेडिकल सेंटर पार्किंग मैप सहायता",
+        metaDescription: "ओमे मेडिकल सेंटर पार्किंग मैप का सहायता पेज, जिसमें उपयोग सहायता, FAQ, गोपनीयता जानकारी और संपर्क विवरण शामिल हैं।",
+        appIconAlt: "ओमे मेडिकल सेंटर पार्किंग मैप ऐप आइकन",
+        appStoreAria: "App Store से ओमे मेडिकल सेंटर पार्किंग मैप डाउनलोड करें",
+        appStoreAlt: "App Store से डाउनलोड करें",
+        pageNav: "पेज नेविगेशन",
+        privacyItems: "गोपनीयता आइटम",
+        eyebrow: "सहायता साइट",
+        appName: "ओमे मेडिकल सेंटर पार्किंग मैप",
+        heroTitle: "अस्पताल के पास पार्किंग को मानचित्र पर तुरंत देखें।",
+        heroLead: "यह iPhone / iPad ऐप ओमे म्युनिसिपल जनरल मेडिकल सेंटर के आसपास समर्थित पार्किंग स्थलों को मानचित्र पर दिखाता है और पार्किंग उपलब्धता छवियों से अनुमानित स्थिति प्रदर्शित करता है।",
+        contactButton: "संपर्क करें",
+        faqButton: "FAQ",
+        navAbout: "अवलोकन",
+        navStatus: "स्थिति गाइड",
+        navFaq: "FAQ",
+        navPrivacy: "गोपनीयता",
+        navContact: "संपर्क",
+        aboutTitle: "अवलोकन",
+        aboutCopy: "ओमे मेडिकल सेंटर पार्किंग मैप, ओमे म्युनिसिपल जनरल मेडिकल सेंटर के आसपास पार्किंग स्थान और उपलब्धता की जांच करने में मदद करता है।",
+        aboutMapTitle: "मानचित्र पर देखें",
+        aboutMapCopy: "अस्पताल के आसपास समर्थित पार्किंग स्थल MapKit मानचित्र पर दिखाए जाते हैं।",
+        aboutStatusTitle: "उपलब्धता स्थिति",
+        aboutStatusCopy: "ऐप बाहरी पार्किंग स्थिति छवियां प्राप्त करता है और डिवाइस पर टेक्स्ट पहचान से उपलब्धता का अनुमान लगाता है।",
+        aboutLocationTitle: "वर्तमान स्थान",
+        aboutLocationCopy: "स्थान अनुमति मिलने के बाद आपका वर्तमान स्थान मानचित्र पर दिखाया जा सकता है।",
+        statusTitle: "स्थिति गाइड",
+        statusCopy: "मानचित्र एनोटेशन प्रत्येक पार्किंग स्थल की स्थिति को छोटे प्रतीक से दिखाते हैं।",
+        availableShort: "उ",
+        availableTitle: "उपलब्ध",
+        availableCopy: "पार्किंग स्थल में उपलब्ध स्थान होने का अनुमान है।",
+        fullShort: "भ",
+        fullTitle: "भरा हुआ",
+        fullCopy: "पार्किंग स्थल भरा हुआ होने का अनुमान है।",
+        unknownTitle: "जांच जारी या अनुपलब्ध",
+        unknownCopy: "छवि प्राप्ति विफलता, नेटवर्क स्थिति या टेक्स्ट पहचान परिणामों के कारण स्थिति की पुष्टि न हो पाने पर दिखाया जाता है।",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "यदि पार्किंग जानकारी अपडेट नहीं होती है तो क्या करें?",
+        faqRefreshAnswer: "ऊपरी-दाएं कोने में रीफ्रेश बटन टैप करें। नेटवर्क स्थिति या जानकारी प्रदाता की स्थिति के आधार पर प्राप्ति में समय लग सकता है।",
+        faqLocationQuestion: "स्थान जानकारी किसलिए उपयोग होती है?",
+        faqLocationAnswer: "यह केवल मानचित्र पर आपका वर्तमान स्थान दिखाने के लिए उपयोग होती है। ऐप आपके स्थान को अपने सर्वर पर भेजता या सहेजता नहीं है।",
+        faqAccuracyQuestion: "क्या दिखाई गई उपलब्धता हमेशा सही होती है?",
+        faqAccuracyAnswer: "स्थिति पार्किंग स्थिति छवियों से डिवाइस पर अनुमानित होती है, इसलिए छवि सामग्री, नेटवर्क स्थिति या टेक्स्ट पहचान परिणामों के आधार पर वास्तविक स्थिति से भिन्न हो सकती है। कृपया स्थल पर लगे निर्देशों और आधिकारिक जानकारी की भी जांच करें।",
+        faqOfficialQuestion: "क्या यह ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप है?",
+        faqOfficialAnswer: "नहीं। यह ऐप ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप नहीं है।",
+        privacyTitle: "गोपनीयता",
+        privacyNotice: "यह ऐप खाता पंजीकरण, लॉगिन, विज्ञापन SDK या एनालिटिक्स SDK का उपयोग नहीं करता। यह आपका वर्तमान स्थान दिखाने के लिए स्थान अनुमति मांगता है, लेकिन स्थान को सहेजता या अपने सर्वर पर नहीं भेजता।",
+        privacyLocationTitle: "स्थान",
+        privacyLocationCopy: "मानचित्र पर आपका वर्तमान स्थान दिखाने के लिए उपयोग होता है।",
+        privacyNetworkTitle: "बाहरी संचार",
+        privacyNetworkCopy: "पार्किंग स्थिति छवियां प्राप्त करने के लिए ऐप बाहरी URL से कनेक्ट करता है।",
+        privacyOcrTitle: "टेक्स्ट पहचान",
+        privacyOcrCopy: "प्राप्त छवियां डिवाइस पर पार्किंग उपलब्धता का अनुमान लगाने के लिए उपयोग होती हैं।",
+        privacyTrackingTitle: "ट्रैकिंग",
+        privacyTrackingCopy: "विज्ञापन या तृतीय-पक्ष ऐप्स और वेबसाइटों में ट्रैकिंग के लिए उपयोग नहीं होता।",
+        contactTitle: "संपर्क",
+        contactCopy: "बग रिपोर्ट या सहायता अनुरोधों के लिए कृपया Google Form से संपर्क करें। अपना डिवाइस, iOS संस्करण, किए गए चरण और स्क्रीन पर दिखी जानकारी जोड़ने से जांच आसान होती है।",
+        googleFormButton: "Google Form खोलें",
+        footerDisclaimer: "ओमे मेडिकल सेंटर पार्किंग मैप, ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप नहीं है। पार्किंग स्थल उपयोग करते समय स्थल पर लगे निर्देशों और आधिकारिक जानकारी को प्राथमिकता दें।"
+      },
+      th: {
+        pageTitle: "การสนับสนุนแผนที่ที่จอดรถศูนย์การแพทย์โอเมะ",
+        metaDescription: "หน้าสนับสนุนสำหรับแผนที่ที่จอดรถศูนย์การแพทย์โอเมะ พร้อมวิธีใช้ FAQ ข้อมูลความเป็นส่วนตัว และช่องทางติดต่อ",
+        appIconAlt: "ไอคอนแอปแผนที่ที่จอดรถศูนย์การแพทย์โอเมะ",
+        appStoreAria: "ดาวน์โหลดแผนที่ที่จอดรถศูนย์การแพทย์โอเมะบน App Store",
+        appStoreAlt: "ดาวน์โหลดบน App Store",
+        pageNav: "การนำทางในหน้า",
+        privacyItems: "รายการความเป็นส่วนตัว",
+        eyebrow: "เว็บไซต์สนับสนุน",
+        appName: "แผนที่ที่จอดรถศูนย์การแพทย์โอเมะ",
+        heroTitle: "ตรวจสอบที่จอดรถใกล้โรงพยาบาลได้อย่างรวดเร็วบนแผนที่",
+        heroLead: "แอป iPhone / iPad ที่แสดงลานจอดรถที่รองรับรอบศูนย์การแพทย์ทั่วไปเทศบาลโอเมะบนแผนที่ และแสดงสถานะที่ประเมินจากภาพข้อมูลที่จอดรถ",
+        contactButton: "ติดต่อ",
+        faqButton: "FAQ",
+        navAbout: "ภาพรวม",
+        navStatus: "คู่มือสถานะ",
+        navFaq: "FAQ",
+        navPrivacy: "ความเป็นส่วนตัว",
+        navContact: "ติดต่อ",
+        aboutTitle: "ภาพรวม",
+        aboutCopy: "แผนที่ที่จอดรถศูนย์การแพทย์โอเมะช่วยให้ตรวจสอบตำแหน่งและสถานะที่จอดรถรอบศูนย์การแพทย์ทั่วไปเทศบาลโอเมะได้",
+        aboutMapTitle: "ตรวจสอบบนแผนที่",
+        aboutMapCopy: "แสดงลานจอดรถที่รองรับรอบโรงพยาบาลบนแผนที่ MapKit",
+        aboutStatusTitle: "สถานะที่จอดรถ",
+        aboutStatusCopy: "แอปดึงภาพสถานะที่จอดรถจากภายนอกและประเมินสถานะด้วยการรู้จำข้อความบนอุปกรณ์",
+        aboutLocationTitle: "ตำแหน่งปัจจุบัน",
+        aboutLocationCopy: "หลังจากอนุญาตตำแหน่งแล้ว สามารถแสดงตำแหน่งปัจจุบันของคุณบนแผนที่ได้",
+        statusTitle: "คู่มือสถานะ",
+        statusCopy: "หมุดบนแผนที่แสดงสถานะของแต่ละลานจอดรถด้วยสัญลักษณ์สั้น ๆ",
+        availableShort: "ว",
+        availableTitle: "ว่าง",
+        availableCopy: "ประเมินว่าลานจอดรถยังมีที่ว่าง",
+        fullShort: "ต",
+        fullTitle: "เต็ม",
+        fullCopy: "ประเมินว่าลานจอดรถเต็ม",
+        unknownTitle: "กำลังตรวจสอบหรือไม่พร้อมใช้งาน",
+        unknownCopy: "แสดงเมื่อไม่สามารถยืนยันสถานะได้จากการดึงภาพล้มเหลว สภาพเครือข่าย หรือผลการรู้จำข้อความ",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "ควรทำอย่างไรหากข้อมูลที่จอดรถไม่อัปเดต",
+        faqRefreshAnswer: "แตะปุ่มรีเฟรชที่มุมขวาบน การดึงข้อมูลอาจใช้เวลาตามสภาพเครือข่ายหรือสถานะของผู้ให้ข้อมูล",
+        faqLocationQuestion: "ข้อมูลตำแหน่งใช้ทำอะไร",
+        faqLocationAnswer: "ใช้เพื่อแสดงตำแหน่งปัจจุบันของคุณบนแผนที่เท่านั้น แอปไม่ส่งหรือบันทึกตำแหน่งไปยังเซิร์ฟเวอร์ของแอป",
+        faqAccuracyQuestion: "สถานะที่แสดงถูกต้องเสมอหรือไม่",
+        faqAccuracyAnswer: "สถานะประเมินบนอุปกรณ์จากภาพสถานะที่จอดรถ จึงอาจแตกต่างจากสถานการณ์จริงตามเนื้อหาภาพ สภาพเครือข่าย หรือผลการรู้จำข้อความ โปรดตรวจสอบป้ายหน้างานและข้อมูลทางการด้วย",
+        faqOfficialQuestion: "นี่เป็นแอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะหรือไม่",
+        faqOfficialAnswer: "ไม่ใช่ แอปนี้ไม่ใช่แอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะ",
+        privacyTitle: "ความเป็นส่วนตัว",
+        privacyNotice: "แอปนี้ไม่ใช้การลงทะเบียนบัญชี การเข้าสู่ระบบ SDK โฆษณา หรือ SDK วิเคราะห์ แอปจะขออนุญาตตำแหน่งเพื่อแสดงตำแหน่งปัจจุบัน แต่จะไม่บันทึกหรือส่งตำแหน่งไปยังเซิร์ฟเวอร์ของแอป",
+        privacyLocationTitle: "ตำแหน่ง",
+        privacyLocationCopy: "ใช้เพื่อแสดงตำแหน่งปัจจุบันบนแผนที่",
+        privacyNetworkTitle: "การสื่อสารภายนอก",
+        privacyNetworkCopy: "แอปเชื่อมต่อ URL ภายนอกเพื่อดึงภาพสถานะที่จอดรถ",
+        privacyOcrTitle: "การรู้จำข้อความ",
+        privacyOcrCopy: "ภาพที่ดึงมาจะใช้บนอุปกรณ์เพื่อประเมินสถานะที่จอดรถ",
+        privacyTrackingTitle: "การติดตาม",
+        privacyTrackingCopy: "ไม่ใช้เพื่อโฆษณาหรือติดตามข้ามแอปและเว็บไซต์ของบุคคลที่สาม",
+        contactTitle: "ติดต่อ",
+        contactCopy: "สำหรับรายงานข้อบกพร่องหรือขอรับการสนับสนุน โปรดติดต่อผ่าน Google Form การระบุอุปกรณ์ เวอร์ชัน iOS ขั้นตอนที่ทำ และสิ่งที่แสดงบนหน้าจอจะช่วยให้ตรวจสอบได้ง่ายขึ้น",
+        googleFormButton: "เปิด Google Form",
+        footerDisclaimer: "แผนที่ที่จอดรถศูนย์การแพทย์โอเมะไม่ใช่แอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะ เมื่อใช้ที่จอดรถ โปรดให้ความสำคัญกับคำแนะนำในสถานที่และข้อมูลทางการ"
+      },
+      vi: {
+        pageTitle: "Hỗ trợ Bản đồ đỗ xe Trung tâm Y tế Ome",
+        metaDescription: "Trang hỗ trợ cho Bản đồ đỗ xe Trung tâm Y tế Ome, gồm hướng dẫn sử dụng, FAQ, thông tin quyền riêng tư và liên hệ.",
+        appIconAlt: "Biểu tượng ứng dụng Bản đồ đỗ xe Trung tâm Y tế Ome",
+        appStoreAria: "Tải Bản đồ đỗ xe Trung tâm Y tế Ome trên App Store",
+        appStoreAlt: "Tải về trên App Store",
+        pageNav: "Điều hướng trang",
+        privacyItems: "Mục quyền riêng tư",
+        eyebrow: "Trang hỗ trợ",
+        appName: "Bản đồ đỗ xe Trung tâm Y tế Ome",
+        heroTitle: "Kiểm tra bãi đỗ xe gần bệnh viện nhanh chóng trên bản đồ.",
+        heroLead: "Ứng dụng iPhone / iPad hiển thị các bãi đỗ xe được hỗ trợ quanh Trung tâm Y tế Tổng hợp Thành phố Ome trên bản đồ và hiển thị trạng thái ước tính từ ảnh thông tin bãi đỗ.",
+        contactButton: "Liên hệ",
+        faqButton: "FAQ",
+        navAbout: "Tổng quan",
+        navStatus: "Hướng dẫn trạng thái",
+        navFaq: "FAQ",
+        navPrivacy: "Quyền riêng tư",
+        navContact: "Liên hệ",
+        aboutTitle: "Tổng quan",
+        aboutCopy: "Bản đồ đỗ xe Trung tâm Y tế Ome giúp kiểm tra vị trí và tình trạng bãi đỗ xe quanh Trung tâm Y tế Tổng hợp Thành phố Ome.",
+        aboutMapTitle: "Kiểm tra trên bản đồ",
+        aboutMapCopy: "Các bãi đỗ xe được hỗ trợ quanh bệnh viện được hiển thị trên bản đồ MapKit.",
+        aboutStatusTitle: "Trạng thái còn chỗ",
+        aboutStatusCopy: "Ứng dụng lấy ảnh trạng thái bãi đỗ từ bên ngoài và ước tính trạng thái bằng nhận dạng văn bản trên thiết bị.",
+        aboutLocationTitle: "Vị trí hiện tại",
+        aboutLocationCopy: "Sau khi cấp quyền vị trí, vị trí hiện tại của bạn có thể được hiển thị trên bản đồ.",
+        statusTitle: "Hướng dẫn trạng thái",
+        statusCopy: "Chú thích trên bản đồ hiển thị trạng thái từng bãi đỗ bằng ký hiệu ngắn.",
+        availableShort: "C",
+        availableTitle: "Còn chỗ",
+        availableCopy: "Bãi đỗ xe được ước tính còn chỗ trống.",
+        fullShort: "Đ",
+        fullTitle: "Đầy",
+        fullCopy: "Bãi đỗ xe được ước tính đã đầy.",
+        unknownTitle: "Đang kiểm tra hoặc không khả dụng",
+        unknownCopy: "Hiển thị khi không thể xác nhận trạng thái do lỗi lấy ảnh, điều kiện mạng hoặc kết quả nhận dạng văn bản.",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "Tôi nên làm gì nếu thông tin bãi đỗ không cập nhật?",
+        faqRefreshAnswer: "Nhấn nút làm mới ở góc trên bên phải. Việc lấy dữ liệu có thể mất thời gian tùy theo điều kiện mạng hoặc trạng thái nguồn cung cấp.",
+        faqLocationQuestion: "Thông tin vị trí được dùng để làm gì?",
+        faqLocationAnswer: "Chỉ dùng để hiển thị vị trí hiện tại của bạn trên bản đồ. Ứng dụng không gửi hoặc lưu vị trí của bạn trên máy chủ riêng.",
+        faqAccuracyQuestion: "Trạng thái còn chỗ hiển thị có luôn chính xác không?",
+        faqAccuracyAnswer: "Trạng thái được ước tính trên thiết bị từ ảnh trạng thái bãi đỗ, nên có thể khác thực tế tùy theo nội dung ảnh, điều kiện mạng hoặc kết quả nhận dạng văn bản. Vui lòng kiểm tra thêm hướng dẫn tại chỗ và thông tin chính thức.",
+        faqOfficialQuestion: "Đây có phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome không?",
+        faqOfficialAnswer: "Không. Ứng dụng này không phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome.",
+        privacyTitle: "Quyền riêng tư",
+        privacyNotice: "Ứng dụng này không sử dụng đăng ký tài khoản, đăng nhập, SDK quảng cáo hoặc SDK phân tích. Ứng dụng yêu cầu quyền vị trí để hiển thị vị trí hiện tại nhưng không lưu vị trí hoặc gửi đến máy chủ riêng.",
+        privacyLocationTitle: "Vị trí",
+        privacyLocationCopy: "Dùng để hiển thị vị trí hiện tại của bạn trên bản đồ.",
+        privacyNetworkTitle: "Kết nối bên ngoài",
+        privacyNetworkCopy: "Ứng dụng kết nối tới URL bên ngoài để lấy ảnh trạng thái bãi đỗ.",
+        privacyOcrTitle: "Nhận dạng văn bản",
+        privacyOcrCopy: "Ảnh đã lấy được dùng trên thiết bị để ước tính trạng thái bãi đỗ.",
+        privacyTrackingTitle: "Theo dõi",
+        privacyTrackingCopy: "Không dùng cho quảng cáo hoặc theo dõi trên ứng dụng và website của bên thứ ba.",
+        contactTitle: "Liên hệ",
+        contactCopy: "Để báo lỗi hoặc yêu cầu hỗ trợ, vui lòng liên hệ qua Google Form. Việc cung cấp thiết bị, phiên bản iOS, thao tác đã thực hiện và nội dung hiển thị sẽ giúp chúng tôi kiểm tra thuận lợi hơn.",
+        googleFormButton: "Mở Google Form",
+        footerDisclaimer: "Bản đồ đỗ xe Trung tâm Y tế Ome không phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome. Khi sử dụng bãi đỗ, vui lòng ưu tiên hướng dẫn tại chỗ và thông tin chính thức."
+      },
+      id: {
+        pageTitle: "Dukungan Peta Parkir Pusat Medis Ome",
+        metaDescription: "Halaman dukungan untuk Peta Parkir Pusat Medis Ome, berisi bantuan penggunaan, FAQ, informasi privasi, dan kontak.",
+        appIconAlt: "Ikon aplikasi Peta Parkir Pusat Medis Ome",
+        appStoreAria: "Unduh Peta Parkir Pusat Medis Ome di App Store",
+        appStoreAlt: "Unduh di App Store",
+        pageNav: "Navigasi halaman",
+        privacyItems: "Item privasi",
+        eyebrow: "Situs Dukungan",
+        appName: "Peta Parkir Pusat Medis Ome",
+        heroTitle: "Periksa parkir dekat rumah sakit dengan cepat di peta.",
+        heroLead: "Aplikasi iPhone / iPad yang menampilkan tempat parkir yang didukung di sekitar Pusat Medis Umum Kota Ome pada peta dan menampilkan status yang diperkirakan dari gambar ketersediaan parkir.",
+        contactButton: "Kontak",
+        faqButton: "FAQ",
+        navAbout: "Ringkasan",
+        navStatus: "Panduan Status",
+        navFaq: "FAQ",
+        navPrivacy: "Privasi",
+        navContact: "Kontak",
+        aboutTitle: "Ringkasan",
+        aboutCopy: "Peta Parkir Pusat Medis Ome membantu memeriksa lokasi dan ketersediaan parkir di sekitar Pusat Medis Umum Kota Ome.",
+        aboutMapTitle: "Periksa di Peta",
+        aboutMapCopy: "Tempat parkir yang didukung di sekitar rumah sakit ditampilkan pada peta MapKit.",
+        aboutStatusTitle: "Status Ketersediaan",
+        aboutStatusCopy: "Aplikasi mengambil gambar status parkir eksternal dan memperkirakan ketersediaan dengan pengenalan teks di perangkat.",
+        aboutLocationTitle: "Lokasi Saat Ini",
+        aboutLocationCopy: "Setelah izin lokasi diberikan, lokasi Anda saat ini dapat ditampilkan di peta.",
+        statusTitle: "Panduan Status",
+        statusCopy: "Anotasi peta menampilkan status setiap tempat parkir dengan simbol singkat.",
+        availableShort: "T",
+        availableTitle: "Tersedia",
+        availableCopy: "Tempat parkir diperkirakan memiliki ruang kosong.",
+        fullShort: "P",
+        fullTitle: "Penuh",
+        fullCopy: "Tempat parkir diperkirakan penuh.",
+        unknownTitle: "Memeriksa atau Tidak Tersedia",
+        unknownCopy: "Ditampilkan saat status tidak dapat dikonfirmasi karena kegagalan pengambilan gambar, kondisi jaringan, atau hasil pengenalan teks.",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "Apa yang harus saya lakukan jika informasi parkir tidak diperbarui?",
+        faqRefreshAnswer: "Ketuk tombol segarkan di sudut kanan atas. Pengambilan data dapat memerlukan waktu tergantung kondisi jaringan atau penyedia informasi.",
+        faqLocationQuestion: "Untuk apa informasi lokasi digunakan?",
+        faqLocationAnswer: "Hanya digunakan untuk menampilkan lokasi Anda saat ini di peta. Aplikasi tidak mengirim atau menyimpan lokasi Anda di server sendiri.",
+        faqAccuracyQuestion: "Apakah ketersediaan yang ditampilkan selalu akurat?",
+        faqAccuracyAnswer: "Status diperkirakan di perangkat dari gambar status parkir, sehingga dapat berbeda dari kondisi sebenarnya tergantung isi gambar, kondisi jaringan, atau hasil pengenalan teks. Harap periksa juga panduan di lokasi dan informasi resmi.",
+        faqOfficialQuestion: "Apakah ini aplikasi resmi dari Pusat Medis Umum Kota Ome?",
+        faqOfficialAnswer: "Tidak. Aplikasi ini bukan aplikasi resmi dari Pusat Medis Umum Kota Ome.",
+        privacyTitle: "Privasi",
+        privacyNotice: "Aplikasi ini tidak menggunakan pendaftaran akun, login, SDK iklan, atau SDK analitik. Aplikasi meminta izin lokasi untuk menampilkan lokasi saat ini, tetapi tidak menyimpan lokasi atau mengirimnya ke server milik aplikasi.",
+        privacyLocationTitle: "Lokasi",
+        privacyLocationCopy: "Digunakan untuk menampilkan lokasi Anda saat ini di peta.",
+        privacyNetworkTitle: "Komunikasi Eksternal",
+        privacyNetworkCopy: "Aplikasi terhubung ke URL eksternal untuk mengambil gambar status parkir.",
+        privacyOcrTitle: "Pengenalan Teks",
+        privacyOcrCopy: "Gambar yang diambil digunakan di perangkat untuk memperkirakan ketersediaan parkir.",
+        privacyTrackingTitle: "Pelacakan",
+        privacyTrackingCopy: "Tidak digunakan untuk iklan atau pelacakan lintas aplikasi dan situs web pihak ketiga.",
+        contactTitle: "Kontak",
+        contactCopy: "Untuk laporan bug atau permintaan dukungan, hubungi kami melalui Google Form. Menyertakan perangkat, versi iOS, langkah yang dilakukan, dan tampilan di layar akan membantu investigasi.",
+        googleFormButton: "Buka Google Form",
+        footerDisclaimer: "Peta Parkir Pusat Medis Ome bukan aplikasi resmi dari Pusat Medis Umum Kota Ome. Saat menggunakan tempat parkir, harap prioritaskan panduan di lokasi dan informasi resmi."
+      },
+      ms: {
+        pageTitle: "Sokongan Peta Parkir Pusat Perubatan Ome",
+        metaDescription: "Halaman sokongan untuk Peta Parkir Pusat Perubatan Ome, dengan bantuan penggunaan, FAQ, maklumat privasi dan butiran hubungan.",
+        appIconAlt: "Ikon aplikasi Peta Parkir Pusat Perubatan Ome",
+        appStoreAria: "Muat turun Peta Parkir Pusat Perubatan Ome di App Store",
+        appStoreAlt: "Muat turun di App Store",
+        pageNav: "Navigasi halaman",
+        privacyItems: "Item privasi",
+        eyebrow: "Laman Sokongan",
+        appName: "Peta Parkir Pusat Perubatan Ome",
+        heroTitle: "Semak parkir berhampiran hospital dengan cepat pada peta.",
+        heroLead: "Aplikasi iPhone / iPad yang memaparkan tempat letak kereta yang disokong di sekitar Pusat Perubatan Umum Perbandaran Ome pada peta dan menunjukkan status yang dianggarkan daripada imej ketersediaan parkir.",
+        contactButton: "Hubungi",
+        faqButton: "FAQ",
+        navAbout: "Gambaran",
+        navStatus: "Panduan Status",
+        navFaq: "FAQ",
+        navPrivacy: "Privasi",
+        navContact: "Hubungi",
+        aboutTitle: "Gambaran",
+        aboutCopy: "Peta Parkir Pusat Perubatan Ome membantu anda menyemak lokasi dan ketersediaan parkir di sekitar Pusat Perubatan Umum Perbandaran Ome.",
+        aboutMapTitle: "Semak pada Peta",
+        aboutMapCopy: "Tempat letak kereta yang disokong di sekitar hospital dipaparkan pada peta MapKit.",
+        aboutStatusTitle: "Status Ketersediaan",
+        aboutStatusCopy: "Aplikasi mendapatkan imej status parkir luaran dan menganggarkan ketersediaan dengan pengecaman teks pada peranti.",
+        aboutLocationTitle: "Lokasi Semasa",
+        aboutLocationCopy: "Selepas kebenaran lokasi diberikan, lokasi semasa anda boleh dipaparkan pada peta.",
+        statusTitle: "Panduan Status",
+        statusCopy: "Anotasi peta menunjukkan status setiap tempat letak kereta dengan simbol ringkas.",
+        availableShort: "T",
+        availableTitle: "Tersedia",
+        availableCopy: "Tempat letak kereta dianggarkan mempunyai ruang kosong.",
+        fullShort: "P",
+        fullTitle: "Penuh",
+        fullCopy: "Tempat letak kereta dianggarkan penuh.",
+        unknownTitle: "Menyemak atau Tidak Tersedia",
+        unknownCopy: "Dipaparkan apabila status tidak dapat disahkan kerana kegagalan mendapatkan imej, keadaan rangkaian atau hasil pengecaman teks.",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "Apa yang perlu saya lakukan jika maklumat parkir tidak dikemas kini?",
+        faqRefreshAnswer: "Ketik butang segar semula di penjuru kanan atas. Pengambilan data mungkin mengambil masa bergantung pada keadaan rangkaian atau penyedia maklumat.",
+        faqLocationQuestion: "Untuk apa maklumat lokasi digunakan?",
+        faqLocationAnswer: "Ia hanya digunakan untuk memaparkan lokasi semasa anda pada peta. Aplikasi tidak menghantar atau menyimpan lokasi anda pada pelayan sendiri.",
+        faqAccuracyQuestion: "Adakah ketersediaan yang dipaparkan sentiasa tepat?",
+        faqAccuracyAnswer: "Status dianggarkan pada peranti daripada imej status parkir, jadi ia mungkin berbeza daripada keadaan sebenar bergantung pada kandungan imej, keadaan rangkaian atau hasil pengecaman teks. Sila semak juga panduan di lokasi dan maklumat rasmi.",
+        faqOfficialQuestion: "Adakah ini aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome?",
+        faqOfficialAnswer: "Tidak. Aplikasi ini bukan aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome.",
+        privacyTitle: "Privasi",
+        privacyNotice: "Aplikasi ini tidak menggunakan pendaftaran akaun, log masuk, SDK iklan atau SDK analitik. Ia meminta kebenaran lokasi untuk memaparkan lokasi semasa, tetapi tidak menyimpan lokasi anda atau menghantarnya ke pelayan milik aplikasi.",
+        privacyLocationTitle: "Lokasi",
+        privacyLocationCopy: "Digunakan untuk memaparkan lokasi semasa anda pada peta.",
+        privacyNetworkTitle: "Komunikasi Luaran",
+        privacyNetworkCopy: "Aplikasi menyambung ke URL luaran untuk mendapatkan imej status parkir.",
+        privacyOcrTitle: "Pengecaman Teks",
+        privacyOcrCopy: "Imej yang diperoleh digunakan pada peranti untuk menganggarkan ketersediaan parkir.",
+        privacyTrackingTitle: "Penjejakan",
+        privacyTrackingCopy: "Tidak digunakan untuk pengiklanan atau penjejakan merentas aplikasi dan laman web pihak ketiga.",
+        contactTitle: "Hubungi",
+        contactCopy: "Untuk laporan pepijat atau permintaan sokongan, sila hubungi kami melalui Google Form. Menyertakan peranti, versi iOS, langkah yang dibuat dan perkara yang dipaparkan pada skrin akan membantu siasatan.",
+        googleFormButton: "Buka Google Form",
+        footerDisclaimer: "Peta Parkir Pusat Perubatan Ome bukan aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome. Semasa menggunakan tempat letak kereta, sila utamakan panduan di lokasi dan maklumat rasmi."
+      },
+      tl: {
+        pageTitle: "Suporta para sa Mapa ng Paradahan ng Ome Medical Center",
+        metaDescription: "Pahina ng suporta para sa Mapa ng Paradahan ng Ome Medical Center, kasama ang tulong sa paggamit, FAQ, impormasyon sa privacy, at detalye ng contact.",
+        appIconAlt: "Icon ng app na Mapa ng Paradahan ng Ome Medical Center",
+        appStoreAria: "I-download ang Mapa ng Paradahan ng Ome Medical Center sa App Store",
+        appStoreAlt: "I-download sa App Store",
+        pageNav: "Navigasyon ng pahina",
+        privacyItems: "Mga item sa privacy",
+        eyebrow: "Site ng Suporta",
+        appName: "Mapa ng Paradahan ng Ome Medical Center",
+        heroTitle: "Mabilis na tingnan sa mapa ang paradahan malapit sa ospital.",
+        heroLead: "Isang iPhone / iPad app na nagpapakita sa mapa ng mga suportadong paradahan sa paligid ng Ome Municipal General Medical Center at nagpapakita ng status na tinaya mula sa mga larawan ng availability ng paradahan.",
+        contactButton: "Makipag-ugnayan",
+        faqButton: "FAQ",
+        navAbout: "Pangkalahatan",
+        navStatus: "Gabay sa Status",
+        navFaq: "FAQ",
+        navPrivacy: "Privacy",
+        navContact: "Contact",
+        aboutTitle: "Pangkalahatan",
+        aboutCopy: "Tinutulungan ka ng Mapa ng Paradahan ng Ome Medical Center na tingnan ang lokasyon at availability ng paradahan sa paligid ng Ome Municipal General Medical Center.",
+        aboutMapTitle: "Tingnan sa Mapa",
+        aboutMapCopy: "Ipinapakita sa MapKit map ang mga suportadong paradahan sa paligid ng ospital.",
+        aboutStatusTitle: "Status ng Availability",
+        aboutStatusCopy: "Kinukuha ng app ang mga external na larawan ng status ng paradahan at tinataya ang availability gamit ang on-device text recognition.",
+        aboutLocationTitle: "Kasalukuyang Lokasyon",
+        aboutLocationCopy: "Pagkatapos pahintulutan ang lokasyon, maipapakita sa mapa ang kasalukuyan mong lokasyon.",
+        statusTitle: "Gabay sa Status",
+        statusCopy: "Ipinapakita ng mga annotation sa mapa ang status ng bawat paradahan gamit ang maikling simbolo.",
+        availableShort: "B",
+        availableTitle: "May bakante",
+        availableCopy: "Tinatayang may bakanteng puwesto ang paradahan.",
+        fullShort: "P",
+        fullTitle: "Puno",
+        fullCopy: "Tinatayang puno ang paradahan.",
+        unknownTitle: "Sinusuri o Hindi Available",
+        unknownCopy: "Ipinapakita kapag hindi makumpirma ang status dahil sa pagkabigo sa pagkuha ng larawan, kundisyon ng network, o resulta ng text recognition.",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "Ano ang gagawin kung hindi nag-a-update ang impormasyon ng paradahan?",
+        faqRefreshAnswer: "I-tap ang refresh button sa kanang itaas. Maaaring tumagal ang pagkuha depende sa kundisyon ng network o ng provider ng impormasyon.",
+        faqLocationQuestion: "Para saan ginagamit ang impormasyon ng lokasyon?",
+        faqLocationAnswer: "Ginagamit lamang ito upang ipakita ang kasalukuyan mong lokasyon sa mapa. Hindi ipinapadala o iniimbak ng app ang iyong lokasyon sa sarili nitong server.",
+        faqAccuracyQuestion: "Laging tama ba ang ipinapakitang availability?",
+        faqAccuracyAnswer: "Tinataya ang status sa device mula sa mga larawan ng status ng paradahan, kaya maaari itong magkaiba sa aktuwal na sitwasyon depende sa nilalaman ng larawan, kundisyon ng network, o resulta ng text recognition. Pakitingnan din ang gabay sa lugar at opisyal na impormasyon.",
+        faqOfficialQuestion: "Opisyal ba itong app ng Ome Municipal General Medical Center?",
+        faqOfficialAnswer: "Hindi. Ang app na ito ay hindi opisyal na app ng Ome Municipal General Medical Center.",
+        privacyTitle: "Privacy",
+        privacyNotice: "Hindi gumagamit ang app na ito ng account registration, login, ad SDK, o analytics SDK. Humihingi ito ng pahintulot sa lokasyon upang ipakita ang kasalukuyang lokasyon, ngunit hindi nito iniimbak o ipinapadala ang lokasyon sa sariling server.",
+        privacyLocationTitle: "Lokasyon",
+        privacyLocationCopy: "Ginagamit upang ipakita ang kasalukuyan mong lokasyon sa mapa.",
+        privacyNetworkTitle: "External na Komunikasyon",
+        privacyNetworkCopy: "Kumokonekta ang app sa external URL upang kumuha ng mga larawan ng status ng paradahan.",
+        privacyOcrTitle: "Text Recognition",
+        privacyOcrCopy: "Ginagamit sa device ang mga nakuhang larawan upang tantiyahin ang availability ng paradahan.",
+        privacyTrackingTitle: "Tracking",
+        privacyTrackingCopy: "Hindi ginagamit para sa advertising o tracking sa mga third-party app at website.",
+        contactTitle: "Contact",
+        contactCopy: "Para sa bug report o support request, makipag-ugnayan sa amin sa pamamagitan ng Google Form. Makakatulong sa pagsusuri ang pagsama ng device, bersyon ng iOS, mga hakbang na ginawa, at ipinakita sa screen.",
+        googleFormButton: "Buksan ang Google Form",
+        footerDisclaimer: "Ang Mapa ng Paradahan ng Ome Medical Center ay hindi opisyal na app ng Ome Municipal General Medical Center. Kapag gumagamit ng paradahan, unahin ang gabay sa lugar at opisyal na impormasyon."
+      },
+      ru: {
+        pageTitle: "Поддержка карты парковок Медицинского центра Омэ",
+        metaDescription: "Страница поддержки карты парковок Медицинского центра Омэ: справка, FAQ, конфиденциальность и контакты.",
+        appIconAlt: "Значок приложения Карта парковок Медицинского центра Омэ",
+        appStoreAria: "Скачать Карту парковок Медицинского центра Омэ в App Store",
+        appStoreAlt: "Скачать в App Store",
+        pageNav: "Навигация по странице",
+        privacyItems: "Пункты конфиденциальности",
+        eyebrow: "Сайт поддержки",
+        appName: "Карта парковок Медицинского центра Омэ",
+        heroTitle: "Быстро проверяйте парковки рядом с больницей на карте.",
+        heroLead: "Приложение для iPhone / iPad показывает поддерживаемые парковки вокруг Муниципального общего медицинского центра Омэ на карте и отображает статус, определенный по изображениям доступности парковок.",
+        contactButton: "Связаться",
+        faqButton: "FAQ",
+        navAbout: "Обзор",
+        navStatus: "Статусы",
+        navFaq: "FAQ",
+        navPrivacy: "Конфиденциальность",
+        navContact: "Контакты",
+        aboutTitle: "Обзор",
+        aboutCopy: "Карта парковок Медицинского центра Омэ помогает проверить расположение и доступность парковок вокруг Муниципального общего медицинского центра Омэ.",
+        aboutMapTitle: "Проверка на карте",
+        aboutMapCopy: "Поддерживаемые парковки вокруг больницы отображаются на карте MapKit.",
+        aboutStatusTitle: "Статус доступности",
+        aboutStatusCopy: "Приложение получает внешние изображения статуса парковок и оценивает доступность с помощью распознавания текста на устройстве.",
+        aboutLocationTitle: "Текущее местоположение",
+        aboutLocationCopy: "После разрешения доступа к геопозиции ваше текущее местоположение может отображаться на карте.",
+        statusTitle: "Статусы",
+        statusCopy: "Аннотации на карте показывают статус каждой парковки коротким символом.",
+        availableShort: "Е",
+        availableTitle: "Есть места",
+        availableCopy: "Предполагается, что на парковке есть свободные места.",
+        fullShort: "З",
+        fullTitle: "Заполнено",
+        fullCopy: "Предполагается, что парковка заполнена.",
+        unknownTitle: "Проверка или недоступно",
+        unknownCopy: "Показывается, когда статус невозможно подтвердить из-за ошибки получения изображения, состояния сети или результатов распознавания текста.",
+        faqTitle: "FAQ",
+        faqRefreshQuestion: "Что делать, если информация о парковке не обновляется?",
+        faqRefreshAnswer: "Нажмите кнопку обновления в правом верхнем углу. Получение данных может занять время в зависимости от сети или состояния источника информации.",
+        faqLocationQuestion: "Для чего используется геопозиция?",
+        faqLocationAnswer: "Только для отображения текущего местоположения на карте. Приложение не отправляет и не сохраняет вашу геопозицию на собственном сервере.",
+        faqAccuracyQuestion: "Всегда ли отображаемая доступность точна?",
+        faqAccuracyAnswer: "Статус оценивается на устройстве по изображениям состояния парковок, поэтому он может отличаться от реальной ситуации из-за содержимого изображения, состояния сети или результатов распознавания текста. Также проверяйте указатели на месте и официальную информацию.",
+        faqOfficialQuestion: "Это официальное приложение Муниципального общего медицинского центра Омэ?",
+        faqOfficialAnswer: "Нет. Это приложение не является официальным приложением Муниципального общего медицинского центра Омэ.",
+        privacyTitle: "Конфиденциальность",
+        privacyNotice: "Приложение не использует регистрацию аккаунта, вход, рекламные SDK или аналитические SDK. Оно запрашивает доступ к геопозиции для отображения текущего местоположения, но не сохраняет его и не отправляет на собственный сервер.",
+        privacyLocationTitle: "Геопозиция",
+        privacyLocationCopy: "Используется для отображения текущего местоположения на карте.",
+        privacyNetworkTitle: "Внешние соединения",
+        privacyNetworkCopy: "Приложение подключается к внешним URL для получения изображений статуса парковок.",
+        privacyOcrTitle: "Распознавание текста",
+        privacyOcrCopy: "Полученные изображения используются на устройстве для оценки доступности парковок.",
+        privacyTrackingTitle: "Отслеживание",
+        privacyTrackingCopy: "Не используется для рекламы или отслеживания в сторонних приложениях и на веб-сайтах.",
+        contactTitle: "Контакты",
+        contactCopy: "Для сообщений об ошибках или запросов поддержки свяжитесь с нами через Google Form. Укажите устройство, версию iOS, выполненные действия и то, что отображалось на экране, чтобы нам было проще разобраться.",
+        googleFormButton: "Открыть Google Form",
+        footerDisclaimer: "Карта парковок Медицинского центра Омэ не является официальным приложением Муниципального общего медицинского центра Омэ. При использовании парковок отдавайте приоритет указателям на месте и официальной информации."
+      }
+    };
+
+    function resolveLanguage() {
+      const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language];
+
+      for (const rawLanguage of browserLanguages) {
+        const language = rawLanguage?.toLowerCase();
+        if (!language) {
+          continue;
+        }
+
+        if (language.startsWith("zh-hans") || language === "zh-cn" || language === "zh-sg") {
+          return "zh-Hans";
+        }
+
+        if (language.startsWith("zh-hant") || language === "zh-tw" || language === "zh-hk" || language === "zh-mo") {
+          return "zh-Hant";
+        }
+
+        const baseLanguage = language.split("-")[0];
+        if (baseLanguage === "fil") {
+          return "tl";
+        }
+
+        if (translations[baseLanguage]) {
+          return baseLanguage;
+        }
+      }
+
+      return "ja";
+    }
+
+    const language = resolveLanguage();
+    const dictionary = translations[language];
+
+    document.documentElement.lang = language;
+    document.title = dictionary.pageTitle;
+    document.querySelector('meta[name="description"]').setAttribute("content", dictionary.metaDescription);
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.dataset.i18n;
+      if (dictionary[key]) {
+        element.textContent = dictionary[key];
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+      element.dataset.i18nAttr.split(",").forEach((mapping) => {
+        const [attribute, key] = mapping.split(":");
+        if (attribute && key && dictionary[key]) {
+          element.setAttribute(attribute, dictionary[key]);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

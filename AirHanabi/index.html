@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AirHanabi Support</title>
+  <meta name="description" content="AirHanabi is an iPhone and iPad app that supports fireworks photography with Olympus AIR A01.">
+  <meta property="og:title" content="AirHanabi Support">
+  <meta property="og:description" content="Capture beautiful fireworks trails with Olympus AIR A01.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b1b23;
+      --muted: #626577;
+      --paper: #ffffff;
+      --soft: #f5f3f8;
+      --line: #e7e1ee;
+      --accent: #341099;
+      --accent-2: #d9364f;
+      --accent-3: #f2b642;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site {
+      display: none;
+    }
+
+    html[lang="ja"] .site.ja,
+    html[lang="en"] .site.en {
+      display: block;
+    }
+
+    .language-switch {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 10;
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 8px;
+      background: rgba(18, 14, 34, 0.54);
+      backdrop-filter: blur(14px);
+    }
+
+    .language-switch button {
+      min-width: 44px;
+      min-height: 34px;
+      border: 0;
+      border-radius: 6px;
+      color: rgba(255, 255, 255, 0.72);
+      background: transparent;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    html[lang="ja"] .language-switch button[data-lang="ja"],
+    html[lang="en"] .language-switch button[data-lang="en"] {
+      color: var(--accent);
+      background: #fff;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 78vh;
+      display: grid;
+      align-items: end;
+      padding: 32px 22px 56px;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(8, 7, 20, 0.34), rgba(8, 7, 20, 0.82)),
+        url("image/rapid-shot-fireworks.jpg") center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, transparent, var(--paper));
+      pointer-events: none;
+    }
+
+    .hero-inner,
+    main,
+    footer {
+      width: min(100%, 960px);
+      margin: 0 auto;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .app-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .app-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.34);
+    }
+
+    .support-label {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .app-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0 0 18px;
+      font-size: clamp(36px, 7vw, 68px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0 0 28px;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .actions,
+    .page-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .button.primary {
+      background: #fff;
+      color: var(--accent);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    main {
+      padding: 54px 22px 20px;
+    }
+
+    .page-nav {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      margin: -22px -22px 46px;
+      padding: 14px 22px;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .page-nav a {
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .page-nav a:hover {
+      color: var(--accent);
+      background: var(--soft);
+    }
+
+    section {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 30px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .feature-grid,
+    .mode-grid,
+    .permission-list {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card,
+    .mode,
+    .permission,
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 8px 28px rgba(28, 20, 58, 0.06);
+    }
+
+    .card,
+    .permission,
+    .faq-item {
+      padding: 20px;
+    }
+
+    .mode {
+      overflow: hidden;
+    }
+
+    .mode img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: var(--soft);
+    }
+
+    .mode-body {
+      padding: 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 32px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .badge.red {
+      background: var(--accent-2);
+    }
+
+    .badge.gold {
+      background: var(--accent-3);
+      color: #392300;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      counter-reset: step;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .steps li {
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: var(--soft);
+    }
+
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .privacy-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .privacy-list li {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: var(--soft);
+      border-radius: 0 8px 8px 0;
+      color: var(--muted);
+    }
+
+    .privacy-list strong {
+      color: var(--ink);
+    }
+
+    .notice {
+      padding: 18px 20px;
+      border-radius: 8px;
+      background: #fff8e8;
+      border: 1px solid #f1d99b;
+      color: #5f4610;
+    }
+
+    footer {
+      padding: 34px 22px 46px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      .hero {
+        min-height: 72vh;
+        padding-top: 70px;
+      }
+
+      .feature-grid,
+      .mode-grid,
+      .permission-list {
+        grid-template-columns: 1fr;
+      }
+
+      .page-nav {
+        position: static;
+        margin-top: -18px;
+      }
+
+      .app-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="language-switch" aria-label="Language selector">
+    <button type="button" data-lang="ja" aria-label="日本語に切り替え">日本語</button>
+    <button type="button" data-lang="en" aria-label="Switch to English">English</button>
+  </div>
+
+  <div class="site ja" lang="ja">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="app-mark">
+          <img class="app-icon" src="image/app-icon.png" alt="AirHanabi のアプリアイコン">
+          <div>
+            <p class="support-label">サポートサイト</p>
+            <p class="app-name">AirHanabi</p>
+          </div>
+        </div>
+        <h1>Olympus AIR A01 で、花火の軌跡を美しく残す。</h1>
+        <p class="lead">AirHanabi は、Olympus AIR A01 カメラを iPhone / iPad から操作し、単発花火やスターマインの撮影をサポートするアプリです。</p>
+        <div class="actions" aria-label="主要リンク">
+          <a class="button primary" href="https://forms.gle/WKrinh4HVWU1Qeb98">問い合わせる</a>
+          <a class="button secondary" href="#faq-ja">よくある質問</a>
+          <a class="button secondary" href="#privacy-ja">プライバシー</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="page-nav" aria-label="ページ内ナビゲーション">
+        <a href="#overview-ja">概要</a>
+        <a href="#modes-ja">撮影モード</a>
+        <a href="#connection-ja">接続と権限</a>
+        <a href="#faq-ja">FAQ</a>
+        <a href="#privacy-ja">プライバシー</a>
+        <a href="#contact-ja">問い合わせ</a>
+      </nav>
+
+      <section id="overview-ja">
+        <h2>概要</h2>
+        <p>AirHanabi は、Olympus AIR A01 とローカル Wi-Fi で接続し、花火撮影向けの操作をかんたんに行うためのアプリです。</p>
+        <div class="feature-grid">
+          <article class="card">
+            <span class="badge">AIR</span>
+            <h3>AIR A01 をリモート操作</h3>
+            <p>ライブビューを確認しながら、iPhone / iPad から Olympus AIR A01 の撮影を操作できます。</p>
+          </article>
+          <article class="card">
+            <span class="badge red">撮影</span>
+            <h3>花火向けの撮影モード</h3>
+            <p>単発花火とスターマインの撮影スタイルに対応しています。</p>
+          </article>
+          <article class="card">
+            <span class="badge gold">保存</span>
+            <h3>写真と動画を保存</h3>
+            <p>撮影した写真や、スターマインから作成した比較明合成写真・タイムラプス動画を保存できます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="modes-ja">
+        <h2>撮影モード</h2>
+        <div class="mode-grid">
+          <article class="mode">
+            <img src="image/single-shot-fireworks.jpg" alt="単発花火の撮影イメージ">
+            <div class="mode-body">
+              <h3>単発花火</h3>
+              <p>花火の開始時にシャッターボタンをタップします。スローシャッターで、花火の軌跡を描いた写真を撮影できます。</p>
+            </div>
+          </article>
+          <article class="mode">
+            <img src="image/rapid-shot-fireworks.jpg" alt="スターマインの撮影イメージ">
+            <div class="mode-body">
+              <h3>スターマイン</h3>
+              <p>開始時と終了時にシャッターボタンをタップします。連続撮影した写真から、複数の花火が写った比較明合成写真を作成できます。</p>
+            </div>
+          </article>
+          <article class="mode">
+            <img src="image/timelapse-preview.jpg" alt="タイムラプス動画の素材イメージ">
+            <div class="mode-body">
+              <h3>タイムラプス動画</h3>
+              <p>スターマイン撮影後、連続撮影した写真からタイムラプス動画を生成できます。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="connection-ja">
+        <h2>接続と権限</h2>
+        <ol class="steps">
+          <li>Olympus AIR A01 の電源を入れ、iPhone / iPad の Wi-Fi を AIR A01 に接続します。</li>
+          <li>AirHanabi を起動し、ローカルネットワークへのアクセスを求められたら許可します。</li>
+          <li>ライブビューが表示されたら、撮影モードを選んで撮影します。</li>
+        </ol>
+
+        <div class="permission-list" style="margin-top: 20px;">
+          <article class="permission">
+            <h3>ローカルネットワーク</h3>
+            <p>Olympus AIR A01 とローカル Wi-Fi 経由で通信するために使用します。</p>
+          </article>
+          <article class="permission">
+            <h3>位置情報</h3>
+            <p>AIR A01 で撮影した写真に位置情報タグを追加するために使用します。</p>
+          </article>
+          <article class="permission">
+            <h3>フォトライブラリ</h3>
+            <p>撮影した写真や作成した動画をフォトライブラリへ保存するために使用します。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq-ja">
+        <h2>よくある質問</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>AIR A01 に接続できない場合はどうすればよいですか。</h3>
+            <p>iPhone / iPad の Wi-Fi が AIR A01 に接続されているか確認してください。初回起動時や iOS の設定変更後は、ローカルネットワークへのアクセス許可も必要です。</p>
+          </article>
+          <article class="faq-item">
+            <h3>撮影した写真はどこに保存されますか。</h3>
+            <p>フォトライブラリへのアクセスを許可している場合、撮影した写真や作成した動画は iOS の写真アプリに保存されます。</p>
+          </article>
+          <article class="faq-item">
+            <h3>位置情報は何に使われますか。</h3>
+            <p>撮影した写真に位置情報タグを追加するために使用します。AirHanabi 独自のサーバーへ位置情報を送信したり保存したりしません。</p>
+          </article>
+          <article class="faq-item">
+            <h3>スターマイン撮影中にアプリが終了した場合、タイムラプス用のデータはどうなりますか。</h3>
+            <p>次回起動時にタイムラプス動画作成用のデータが残っている場合、動画を作成するか破棄するかを選択できます。</p>
+          </article>
+          <article class="faq-item">
+            <h3>Olympus の公式アプリですか。</h3>
+            <p>いいえ。AirHanabi は Olympus または OM Digital Solutions の公式アプリではありません。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="privacy-ja">
+        <h2>プライバシー</h2>
+        <p>AirHanabi は、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。</p>
+        <ul class="privacy-list">
+          <li><strong>ローカルネットワーク</strong> Olympus AIR A01 に接続するために使用します。</li>
+          <li><strong>位置情報</strong> 撮影した写真に位置情報タグを追加するために使用します。</li>
+          <li><strong>フォトライブラリ</strong> 撮影した写真や作成した動画を保存するために使用します。</li>
+          <li><strong>トラッキング</strong> 広告や他社アプリ・Web サイト横断の追跡には使用しません。</li>
+        </ul>
+      </section>
+
+      <section id="contact-ja">
+        <h2>問い合わせ</h2>
+        <p>不具合報告やサポート依頼の際は、利用端末、iOS バージョン、Olympus AIR A01 の状態、発生した操作、表示されたメッセージを添えてご連絡ください。</p>
+        <p class="notice"><a href="https://forms.gle/WKrinh4HVWU1Qeb98">問い合わせフォーム</a> からお問い合わせください。</p>
+        <p>AirHanabi は Olympus または OM Digital Solutions の公式アプリではありません。カメラ本体、レンズ、アクセサリに関する問い合わせは、各製品の公式サポート情報を確認してください。</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© AirHanabi</p>
+    </footer>
+  </div>
+
+  <div class="site en" lang="en">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="app-mark">
+          <img class="app-icon" src="image/app-icon.png" alt="AirHanabi app icon">
+          <div>
+            <p class="support-label">Support Site</p>
+            <p class="app-name">AirHanabi</p>
+          </div>
+        </div>
+        <h1>Capture beautiful fireworks trails with Olympus AIR A01.</h1>
+        <p class="lead">AirHanabi is an iPhone and iPad app for controlling Olympus AIR A01 and supporting single-shot fireworks and starmine photography.</p>
+        <div class="actions" aria-label="Primary links">
+          <a class="button primary" href="https://forms.gle/WKrinh4HVWU1Qeb98">Contact</a>
+          <a class="button secondary" href="#faq-en">FAQ</a>
+          <a class="button secondary" href="#privacy-en">Privacy</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="page-nav" aria-label="Page navigation">
+        <a href="#overview-en">Overview</a>
+        <a href="#modes-en">Modes</a>
+        <a href="#connection-en">Connection</a>
+        <a href="#faq-en">FAQ</a>
+        <a href="#privacy-en">Privacy</a>
+        <a href="#contact-en">Contact</a>
+      </nav>
+
+      <section id="overview-en">
+        <h2>Overview</h2>
+        <p>AirHanabi connects to Olympus AIR A01 over local Wi-Fi and provides simple controls designed for fireworks photography.</p>
+        <div class="feature-grid">
+          <article class="card">
+            <span class="badge">AIR</span>
+            <h3>Remote AIR A01 Control</h3>
+            <p>Control Olympus AIR A01 from your iPhone or iPad while checking the live view.</p>
+          </article>
+          <article class="card">
+            <span class="badge red">Shoot</span>
+            <h3>Fireworks Shooting Modes</h3>
+            <p>Use modes for single-shot fireworks and rapid continuous-shot fireworks.</p>
+          </article>
+          <article class="card">
+            <span class="badge gold">Save</span>
+            <h3>Save Photos and Movies</h3>
+            <p>Save captured photos, lighten-composite starmine photos, and time-lapse movies.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="modes-en">
+        <h2>Shooting Modes</h2>
+        <div class="mode-grid">
+          <article class="mode">
+            <img src="image/single-shot-fireworks.jpg" alt="Single-shot fireworks sample">
+            <div class="mode-body">
+              <h3>Single-Shot Fireworks</h3>
+              <p>Tap the shutter button when the fireworks start. The slow shutter captures graceful fireworks trails.</p>
+            </div>
+          </article>
+          <article class="mode">
+            <img src="image/rapid-shot-fireworks.jpg" alt="Starmine fireworks sample">
+            <div class="mode-body">
+              <h3>Starmine</h3>
+              <p>Tap the shutter button at the start and again at the end. AirHanabi creates a lighten-composite photo from the continuously captured images.</p>
+            </div>
+          </article>
+          <article class="mode">
+            <img src="image/timelapse-preview.jpg" alt="Time-lapse preview sample">
+            <div class="mode-body">
+              <h3>Time-Lapse Movie</h3>
+              <p>After starmine shooting, AirHanabi can generate a time-lapse movie from the captured photos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="connection-en">
+        <h2>Connection and Permissions</h2>
+        <ol class="steps">
+          <li>Turn on Olympus AIR A01, then connect your iPhone or iPad to the AIR A01 Wi-Fi network.</li>
+          <li>Launch AirHanabi and allow Local Network access when prompted.</li>
+          <li>When the live view appears, choose a shooting mode and start shooting.</li>
+        </ol>
+
+        <div class="permission-list" style="margin-top: 20px;">
+          <article class="permission">
+            <h3>Local Network</h3>
+            <p>Used to communicate with Olympus AIR A01 over local Wi-Fi.</p>
+          </article>
+          <article class="permission">
+            <h3>Location</h3>
+            <p>Used to add location tags to photos captured with AIR A01.</p>
+          </article>
+          <article class="permission">
+            <h3>Photo Library</h3>
+            <p>Used to save captured photos and generated movies to your photo library.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq-en">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>What should I do if I cannot connect to AIR A01?</h3>
+            <p>Check that your iPhone or iPad is connected to the AIR A01 Wi-Fi network. Local Network permission is also required after first launch or after changing iOS settings.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Where are captured photos saved?</h3>
+            <p>If Photo Library access is allowed, captured photos and generated movies are saved to the iOS Photos app.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How is location information used?</h3>
+            <p>Location is used only to add location tags to captured photos. AirHanabi does not send or store location information on its own server.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What happens if the app quits during starmine shooting?</h3>
+            <p>If data for creating a time-lapse movie remains, you can choose to create the movie or discard the data the next time the app starts.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Is AirHanabi an official Olympus app?</h3>
+            <p>No. AirHanabi is not an official app from Olympus or OM Digital Solutions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="privacy-en">
+        <h2>Privacy</h2>
+        <p>AirHanabi does not use account registration, login, advertising SDKs, or analytics SDKs.</p>
+        <ul class="privacy-list">
+          <li><strong>Local Network</strong> Used to connect to Olympus AIR A01.</li>
+          <li><strong>Location</strong> Used to add location tags to captured photos.</li>
+          <li><strong>Photo Library</strong> Used to save captured photos and generated movies.</li>
+          <li><strong>Tracking</strong> Not used for advertising or tracking across other companies' apps and websites.</li>
+        </ul>
+      </section>
+
+      <section id="contact-en">
+        <h2>Contact</h2>
+        <p>When reporting an issue or requesting support, please include your device model, iOS version, Olympus AIR A01 status, the steps that caused the issue, and any messages shown by the app.</p>
+        <p class="notice">Please contact us through the <a href="https://forms.gle/WKrinh4HVWU1Qeb98">support form</a>.</p>
+        <p>AirHanabi is not an official app from Olympus or OM Digital Solutions. For questions about the camera body, lenses, or accessories, please check the official support information for each product.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© AirHanabi</p>
+    </footer>
+  </div>
+
+  <script>
+    const titles = {
+      ja: "AirHanabi サポート",
+      en: "AirHanabi Support"
+    };
+
+    const descriptions = {
+      ja: "AirHanabi は、Olympus AIR A01 で花火撮影をサポートする iPhone / iPad アプリです。",
+      en: "AirHanabi is an iPhone and iPad app that supports fireworks photography with Olympus AIR A01."
+    };
+
+    function applyLanguage(lang, updateHash = true) {
+      const nextLang = lang === "en" ? "en" : "ja";
+      document.documentElement.lang = nextLang;
+      document.title = titles[nextLang];
+      document.querySelector('meta[name="description"]').setAttribute("content", descriptions[nextLang]);
+      localStorage.setItem("airhanabi-language", nextLang);
+      if (updateHash) {
+        history.replaceState(null, "", nextLang === "en" ? "#en" : "#ja");
+      }
+    }
+
+    document.querySelectorAll(".language-switch button").forEach((button) => {
+      button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+    });
+
+    const initialLanguage =
+      location.hash === "#en" || location.hash.endsWith("-en")
+        ? "en"
+        : location.hash === "#ja" || location.hash.endsWith("-ja")
+          ? "ja"
+          : localStorage.getItem("airhanabi-language") || (navigator.language.startsWith("ja") ? "ja" : "en");
+
+    applyLanguage(initialLanguage, false);
+  </script>
+</body>
+</html>

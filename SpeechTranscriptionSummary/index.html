@@ -384,6 +384,7 @@
         <a href="#usage">使い方</a>
         <a href="#faq">FAQ</a>
         <a href="#privacy">プライバシー</a>
+        <a href="#ads">広告</a>
         <a href="#contact">問い合わせ</a>
       </div>
     </nav>
@@ -459,6 +460,10 @@
           <h3>取り込んだ音声や結果を削除できますか。</h3>
           <p>文字起こしタブの一覧でスワイプ削除するか、詳細画面の削除操作から、取り込み済み音声と処理結果を削除できます。</p>
         </article>
+        <article class="faq">
+          <h3>広告は表示されますか。</h3>
+          <p>アプリ画面の下部に Google AdMob のバナー広告を表示します。地域や設定に応じて、広告表示に関する同意確認が表示される場合があります。</p>
+        </article>
       </div>
     </section>
 
@@ -472,10 +477,25 @@
         <li><strong>利用目的</strong>音声の一覧管理、プレビュー再生、文字起こし、話者整理、要約、結果の表示やコピーのために利用します。</li>
         <li><strong>保存と削除</strong>取り込まれた音声ファイルと処理結果はユーザーの端末内に保存され、アプリ内の削除操作で削除できます。</li>
         <li><strong>外部サービス</strong>文字起こし、話者整理、要約には、iOS が提供する SpeechAnalyzer、SFSpeechRecognizer、Foundation Models などの機能を利用します。</li>
+        <li><strong>広告</strong>アプリ内のバナー広告表示と広告同意確認のため、Google Mobile Ads SDK と Google User Messaging Platform SDK を利用します。</li>
         <li><strong>第三者提供</strong>開発者は、アプリ内の音声ファイル、文字起こし結果、話者整理結果、要約結果を第三者へ販売または広告目的で提供しません。</li>
-        <li><strong>トラッキング</strong>アカウント登録、広告配信、トラッキングを目的とした情報収集は行いません。</li>
+        <li><strong>トラッキング</strong>広告 SDK のデータ利用やトラッキング該当有無は、Google の SDK 仕様、AdMob の設定、ユーザーの同意選択、OS のプライバシー設定に依存します。</li>
         <li><strong>問い合わせ</strong>お問い合わせフォームから送信された内容は、質問への回答、不具合調査、品質改善のために利用します。</li>
-        <li><strong>最終更新日</strong>2026年5月3日</li>
+        <li><strong>最終更新日</strong>2026年5月6日</li>
+      </ul>
+    </section>
+
+    <section id="ads">
+      <h2>広告について</h2>
+      <p class="section-copy">文字起こしメーカーでは、アプリ運営のため Google AdMob のバナー広告を表示します。</p>
+      <div class="notice">
+        <p>広告表示にあたり、Google Mobile Ads SDK と Google User Messaging Platform SDK を利用します。地域や設定に応じて、パーソナライズ広告、非パーソナライズ広告、広告識別子などに関する同意確認が表示される場合があります。</p>
+      </div>
+      <ul class="meta-list" aria-label="広告に関する項目">
+        <li><strong>広告事業者</strong>Google AdMob</li>
+        <li><strong>同意確認</strong>Google User Messaging Platform SDK により、必要に応じて広告表示に関する選択肢を表示します。</li>
+        <li><strong>データの扱い</strong>広告配信に関するデータの扱いは、Google の SDK 仕様、AdMob の設定、ユーザーの同意選択、OS のプライバシー設定に依存します。</li>
+        <li><strong>音声データ</strong>開発者は、取り込まれた音声ファイル、文字起こし結果、要約結果を広告目的で第三者へ販売または提供しません。</li>
       </ul>
     </section>
 

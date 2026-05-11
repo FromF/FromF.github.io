@@ -368,6 +368,10 @@
           <h3 data-i18n="aboutLocationTitle">現在地に対応</h3>
           <p data-i18n="aboutLocationCopy">位置情報の許可後、現在地を地図上に表示できます。</p>
         </article>
+        <article class="panel">
+          <h3 data-i18n="aboutAdsTitle">広告表示</h3>
+          <p data-i18n="aboutAdsCopy">アプリの運営のため、画面下部に Google AdMob のバナー広告を表示する場合があります。</p>
+        </article>
       </div>
     </section>
 
@@ -424,13 +428,13 @@
     <section id="privacy">
       <h2 data-i18n="privacyTitle">プライバシー</h2>
       <div class="notice">
-        <p data-i18n="privacyNotice">本アプリは、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。</p>
+        <p data-i18n="privacyNotice">本アプリは、アカウント登録やログイン機能を提供していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。広告表示のため、Google AdMob（Google Mobile Ads SDK）を使用しています。</p>
       </div>
       <ul class="meta-list" aria-label="プライバシー項目" data-i18n-attr="aria-label:privacyItems">
         <li><strong data-i18n="privacyLocationTitle">位置情報</strong><span data-i18n="privacyLocationCopy">現在地を地図上に表示するために使用します。</span></li>
         <li><strong data-i18n="privacyNetworkTitle">外部通信</strong><span data-i18n="privacyNetworkCopy">駐車状況画像を取得するため、外部 URL へ通信します。</span></li>
         <li><strong data-i18n="privacyOcrTitle">文字認識</strong><span data-i18n="privacyOcrCopy">取得した画像は端末上で満空状態の判定に使用します。</span></li>
-        <li><strong data-i18n="privacyTrackingTitle">トラッキング</strong><span data-i18n="privacyTrackingCopy">広告や他社アプリ・Webサイト横断の追跡には使用しません。</span></li>
+        <li><strong data-i18n="privacyTrackingTitle">広告</strong><span data-i18n="privacyTrackingCopy">Google AdMob のバナー広告を表示します。Google Mobile Ads SDK は、広告表示、広告品質の維持、不正防止、パフォーマンス改善などのため、IPアドレス、デバイス識別子、広告の表示・操作情報、診断情報などを収集する場合があります。</span></li>
       </ul>
     </section>
 
@@ -446,6 +450,7 @@
   <footer>
     <div class="footer-inner">
       <p data-i18n="footerDisclaimer">青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。</p>
+      <p data-i18n="footerPrivacyRevision">プライバシーポリシー改定日: 2026年5月3日</p>
     </div>
   </footer>
   <script>
@@ -477,6 +482,8 @@
         aboutStatusCopy: "外部の駐車状況画像を取得し、端末上の文字認識で状態を判定します。",
         aboutLocationTitle: "現在地に対応",
         aboutLocationCopy: "位置情報の許可後、現在地を地図上に表示できます。",
+        aboutAdsTitle: "広告表示",
+        aboutAdsCopy: "アプリの運営のため、画面下部に Google AdMob のバナー広告を表示する場合があります。",
         statusTitle: "表示の見方",
         statusCopy: "地図上のアノテーションは、駐車場ごとの状態を短い記号で表示します。",
         availableShort: "空",
@@ -497,19 +504,20 @@
         faqOfficialQuestion: "市立青梅総合医療センターの公式アプリですか。",
         faqOfficialAnswer: "いいえ。本アプリは市立青梅総合医療センターの公式アプリではありません。",
         privacyTitle: "プライバシー",
-        privacyNotice: "本アプリは、アカウント登録、ログイン、広告 SDK、解析 SDK を使用していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。",
+        privacyNotice: "本アプリは、アカウント登録やログイン機能を提供していません。現在地表示のために位置情報の利用許可を求めますが、位置情報を保存したり独自サーバーへ送信したりしません。広告表示のため、Google AdMob（Google Mobile Ads SDK）を使用しています。",
         privacyLocationTitle: "位置情報",
         privacyLocationCopy: "現在地を地図上に表示するために使用します。",
         privacyNetworkTitle: "外部通信",
         privacyNetworkCopy: "駐車状況画像を取得するため、外部 URL へ通信します。",
         privacyOcrTitle: "文字認識",
         privacyOcrCopy: "取得した画像は端末上で満空状態の判定に使用します。",
-        privacyTrackingTitle: "トラッキング",
-        privacyTrackingCopy: "広告や他社アプリ・Webサイト横断の追跡には使用しません。",
+        privacyTrackingTitle: "広告",
+        privacyTrackingCopy: "Google AdMob のバナー広告を表示します。Google Mobile Ads SDK は、広告表示、広告品質の維持、不正防止、パフォーマンス改善などのため、IPアドレス、デバイス識別子、広告の表示・操作情報、診断情報などを収集する場合があります。",
         contactTitle: "問い合わせ",
         contactCopy: "不具合報告やサポート依頼は、Google Form からご連絡ください。問い合わせ時は、利用端末、iOS バージョン、発生した操作、表示内容を添えていただくと確認がスムーズです。",
         googleFormButton: "Google Form を開く",
-        footerDisclaimer: "青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。"
+        footerDisclaimer: "青梅メディカル駐車場マップは、市立青梅総合医療センターの公式アプリではありません。実際の駐車場利用時は、現地案内と公式情報を優先してください。",
+        footerPrivacyRevision: "プライバシーポリシー改定日: 2026年5月3日"
       },
       en: {
         pageTitle: "Ome Medical Center Parking Map Support",
@@ -538,6 +546,8 @@
         aboutStatusCopy: "The app retrieves external parking status images and estimates availability with on-device text recognition.",
         aboutLocationTitle: "Current Location",
         aboutLocationCopy: "After location permission is granted, your current location can be shown on the map.",
+        aboutAdsTitle: "Ads",
+        aboutAdsCopy: "Google AdMob banner ads may appear at the bottom of the screen to support app operation.",
         statusTitle: "Status Guide",
         statusCopy: "Map annotations show each parking lot's status with a short symbol.",
         availableShort: "A",
@@ -558,19 +568,20 @@
         faqOfficialQuestion: "Is this an official app from Ome Municipal General Medical Center?",
         faqOfficialAnswer: "No. This app is not an official app from Ome Municipal General Medical Center.",
         privacyTitle: "Privacy",
-        privacyNotice: "This app does not use account registration, login, ad SDKs, or analytics SDKs. It asks for location permission to show your current location, but it does not store your location or send it to an app-owned server.",
+        privacyNotice: "This app does not provide account registration or login. It asks for location permission to show your current location, but it does not store your location or send it to an app-owned server. It uses Google AdMob (Google Mobile Ads SDK) to display ads.",
         privacyLocationTitle: "Location",
         privacyLocationCopy: "Used to show your current location on the map.",
         privacyNetworkTitle: "External Communication",
         privacyNetworkCopy: "The app connects to external URLs to retrieve parking status images.",
         privacyOcrTitle: "Text Recognition",
         privacyOcrCopy: "Retrieved images are used on device to estimate parking availability.",
-        privacyTrackingTitle: "Tracking",
-        privacyTrackingCopy: "Not used for advertising or tracking across third-party apps and websites.",
+        privacyTrackingTitle: "Ads",
+        privacyTrackingCopy: "The app displays Google AdMob banner ads. Google Mobile Ads SDK may collect IP address, device identifiers, ad impression and interaction data, diagnostics, and similar data for ad delivery, ad quality, fraud prevention, and performance improvement.",
         contactTitle: "Contact",
         contactCopy: "For bug reports or support requests, please contact us through the Google Form. Including your device, iOS version, steps taken, and what appeared on screen helps us investigate smoothly.",
         googleFormButton: "Open Google Form",
-        footerDisclaimer: "Ome Medical Center Parking Map is not an official app from Ome Municipal General Medical Center. When using parking lots, please prioritize on-site guidance and official information."
+        footerDisclaimer: "Ome Medical Center Parking Map is not an official app from Ome Municipal General Medical Center. When using parking lots, please prioritize on-site guidance and official information.",
+        footerPrivacyRevision: "Privacy policy revised: May 3, 2026"
       },
       "zh-Hans": {
         pageTitle: "青梅医疗中心停车地图 支持",
@@ -599,6 +610,8 @@
         aboutStatusCopy: "获取外部停车状况图片，并通过设备端文字识别判定状态。",
         aboutLocationTitle: "支持当前位置",
         aboutLocationCopy: "允许使用位置信息后，可以在地图上显示当前位置。",
+        aboutAdsTitle: "广告显示",
+        aboutAdsCopy: "为支持应用运营，屏幕底部可能会显示 Google AdMob 横幅广告。",
         statusTitle: "显示说明",
         statusCopy: "地图上的标注会用简短符号显示每个停车场的状态。",
         availableShort: "空",
@@ -619,19 +632,20 @@
         faqOfficialQuestion: "这是青梅市立综合医疗中心的官方 App 吗？",
         faqOfficialAnswer: "不是。本 App 不是青梅市立综合医疗中心的官方 App。",
         privacyTitle: "隐私",
-        privacyNotice: "本 App 不使用账号注册、登录、广告 SDK 或分析 SDK。为显示当前位置会请求位置权限，但不会保存位置信息或发送到自有服务器。",
+        privacyNotice: "本 App 不提供账号注册或登录功能。为显示当前位置会请求位置权限，但不会保存位置信息或发送到自有服务器。为显示广告，使用 Google AdMob（Google Mobile Ads SDK）。",
         privacyLocationTitle: "位置信息",
         privacyLocationCopy: "用于在地图上显示当前位置。",
         privacyNetworkTitle: "外部通信",
         privacyNetworkCopy: "为获取停车状况图片，会访问外部 URL。",
         privacyOcrTitle: "文字识别",
         privacyOcrCopy: "获取的图片会在设备端用于判定停车空满状态。",
-        privacyTrackingTitle: "跟踪",
-        privacyTrackingCopy: "不会用于广告或跨第三方 App 与网站的跟踪。",
+        privacyTrackingTitle: "广告",
+        privacyTrackingCopy: "本 App 会显示 Google AdMob 横幅广告。Google Mobile Ads SDK 可能会收集 IP 地址、设备标识符、广告展示和互动信息、诊断信息等，用于广告投放、广告质量维护、防止欺诈和改进性能。",
         contactTitle: "联系",
         contactCopy: "如需报告问题或请求支持，请通过 Google Form 联系我们。请附上使用设备、iOS 版本、发生问题时的操作和显示内容，以便顺利确认。",
         googleFormButton: "打开 Google Form",
-        footerDisclaimer: "青梅医疗中心停车地图不是青梅市立综合医疗中心的官方 App。实际使用停车场时，请优先遵循现场指引和官方信息。"
+        footerDisclaimer: "青梅医疗中心停车地图不是青梅市立综合医疗中心的官方 App。实际使用停车场时，请优先遵循现场指引和官方信息。",
+        footerPrivacyRevision: "隐私政策修订日期：2026年5月3日"
       },
       "zh-Hant": {
         pageTitle: "青梅醫療中心停車地圖 支援",
@@ -660,6 +674,8 @@
         aboutStatusCopy: "取得外部停車狀況圖片，並透過裝置端文字辨識判定狀態。",
         aboutLocationTitle: "支援目前位置",
         aboutLocationCopy: "允許使用位置資訊後，可以在地圖上顯示目前位置。",
+        aboutAdsTitle: "廣告顯示",
+        aboutAdsCopy: "為支援 App 營運，畫面底部可能會顯示 Google AdMob 橫幅廣告。",
         statusTitle: "顯示說明",
         statusCopy: "地圖上的標註會用簡短符號顯示每個停車場的狀態。",
         availableShort: "空",
@@ -680,19 +696,20 @@
         faqOfficialQuestion: "這是青梅市立綜合醫療中心的官方 App 嗎？",
         faqOfficialAnswer: "不是。本 App 不是青梅市立綜合醫療中心的官方 App。",
         privacyTitle: "隱私",
-        privacyNotice: "本 App 不使用帳號註冊、登入、廣告 SDK 或分析 SDK。為顯示目前位置會要求位置權限，但不會儲存位置資訊或傳送到自有伺服器。",
+        privacyNotice: "本 App 不提供帳號註冊或登入功能。為顯示目前位置會要求位置權限，但不會儲存位置資訊或傳送到自有伺服器。為顯示廣告，會使用 Google AdMob（Google Mobile Ads SDK）。",
         privacyLocationTitle: "位置資訊",
         privacyLocationCopy: "用於在地圖上顯示目前位置。",
         privacyNetworkTitle: "外部通訊",
         privacyNetworkCopy: "為取得停車狀況圖片，會連線到外部 URL。",
         privacyOcrTitle: "文字辨識",
         privacyOcrCopy: "取得的圖片會在裝置端用於判定停車空滿狀態。",
-        privacyTrackingTitle: "追蹤",
-        privacyTrackingCopy: "不會用於廣告或跨第三方 App 與網站的追蹤。",
+        privacyTrackingTitle: "廣告",
+        privacyTrackingCopy: "本 App 會顯示 Google AdMob 橫幅廣告。Google Mobile Ads SDK 可能會收集 IP 位址、裝置識別碼、廣告顯示與互動資訊、診斷資訊等，用於廣告投放、廣告品質維護、防止詐欺和改善效能。",
         contactTitle: "聯絡",
         contactCopy: "如需回報問題或請求支援，請透過 Google Form 聯絡我們。請附上使用裝置、iOS 版本、發生問題時的操作和顯示內容，以便順利確認。",
         googleFormButton: "開啟 Google Form",
-        footerDisclaimer: "青梅醫療中心停車地圖不是青梅市立綜合醫療中心的官方 App。實際使用停車場時，請優先遵循現場指引和官方資訊。"
+        footerDisclaimer: "青梅醫療中心停車地圖不是青梅市立綜合醫療中心的官方 App。實際使用停車場時，請優先遵循現場指引和官方資訊。",
+        footerPrivacyRevision: "隱私權政策修訂日期：2026年5月3日"
       },
       ko: {
         pageTitle: "오메 의료센터 주차장 지도 지원",
@@ -721,6 +738,8 @@
         aboutStatusCopy: "외부 주차 상황 이미지를 가져와 기기 내 문자 인식으로 상태를 판정합니다.",
         aboutLocationTitle: "현재 위치 지원",
         aboutLocationCopy: "위치 정보 허용 후 현재 위치를 지도에 표시할 수 있습니다.",
+        aboutAdsTitle: "광고 표시",
+        aboutAdsCopy: "앱 운영을 위해 화면 하단에 Google AdMob 배너 광고가 표시될 수 있습니다.",
         statusTitle: "표시 안내",
         statusCopy: "지도 주석은 각 주차장의 상태를 짧은 기호로 표시합니다.",
         availableShort: "가",
@@ -741,19 +760,20 @@
         faqOfficialQuestion: "오메 시립 종합의료센터의 공식 앱인가요?",
         faqOfficialAnswer: "아니요. 이 앱은 오메 시립 종합의료센터의 공식 앱이 아닙니다.",
         privacyTitle: "개인정보 보호",
-        privacyNotice: "이 앱은 계정 등록, 로그인, 광고 SDK, 분석 SDK를 사용하지 않습니다. 현재 위치 표시를 위해 위치 정보 권한을 요청하지만, 위치 정보를 저장하거나 자체 서버로 전송하지 않습니다.",
+        privacyNotice: "이 앱은 계정 등록이나 로그인 기능을 제공하지 않습니다. 현재 위치 표시를 위해 위치 정보 권한을 요청하지만, 위치 정보를 저장하거나 자체 서버로 전송하지 않습니다. 광고 표시를 위해 Google AdMob(Google Mobile Ads SDK)을 사용합니다.",
         privacyLocationTitle: "위치 정보",
         privacyLocationCopy: "현재 위치를 지도에 표시하기 위해 사용합니다.",
         privacyNetworkTitle: "외부 통신",
         privacyNetworkCopy: "주차 상황 이미지를 가져오기 위해 외부 URL과 통신합니다.",
         privacyOcrTitle: "문자 인식",
         privacyOcrCopy: "가져온 이미지는 기기 내에서 주차 상태 판정에 사용합니다.",
-        privacyTrackingTitle: "추적",
-        privacyTrackingCopy: "광고나 타사 앱 및 웹사이트 간 추적에는 사용하지 않습니다.",
+        privacyTrackingTitle: "광고",
+        privacyTrackingCopy: "이 앱은 Google AdMob 배너 광고를 표시합니다. Google Mobile Ads SDK는 광고 게재, 광고 품질 유지, 부정 방지, 성능 개선 등을 위해 IP 주소, 기기 식별자, 광고 표시 및 상호작용 정보, 진단 정보 등을 수집할 수 있습니다.",
         contactTitle: "문의",
         contactCopy: "오류 신고나 지원 요청은 Google Form으로 연락해 주세요. 사용 기기, iOS 버전, 발생한 조작, 표시 내용을 함께 보내 주시면 확인이 원활합니다.",
         googleFormButton: "Google Form 열기",
-        footerDisclaimer: "오메 의료센터 주차장 지도는 오메 시립 종합의료센터의 공식 앱이 아닙니다. 실제 주차장 이용 시에는 현장 안내와 공식 정보를 우선해 주세요."
+        footerDisclaimer: "오메 의료센터 주차장 지도는 오메 시립 종합의료센터의 공식 앱이 아닙니다. 실제 주차장 이용 시에는 현장 안내와 공식 정보를 우선해 주세요.",
+        footerPrivacyRevision: "개인정보 처리방침 개정일: 2026년 5월 3일"
       },
       hi: {
         pageTitle: "ओमे मेडिकल सेंटर पार्किंग मैप सहायता",
@@ -782,6 +802,8 @@
         aboutStatusCopy: "ऐप बाहरी पार्किंग स्थिति छवियां प्राप्त करता है और डिवाइस पर टेक्स्ट पहचान से उपलब्धता का अनुमान लगाता है।",
         aboutLocationTitle: "वर्तमान स्थान",
         aboutLocationCopy: "स्थान अनुमति मिलने के बाद आपका वर्तमान स्थान मानचित्र पर दिखाया जा सकता है।",
+        aboutAdsTitle: "विज्ञापन",
+        aboutAdsCopy: "ऐप संचालन में सहायता के लिए स्क्रीन के नीचे Google AdMob बैनर विज्ञापन दिखाई दे सकते हैं।",
         statusTitle: "स्थिति गाइड",
         statusCopy: "मानचित्र एनोटेशन प्रत्येक पार्किंग स्थल की स्थिति को छोटे प्रतीक से दिखाते हैं।",
         availableShort: "उ",
@@ -802,19 +824,20 @@
         faqOfficialQuestion: "क्या यह ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप है?",
         faqOfficialAnswer: "नहीं। यह ऐप ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप नहीं है।",
         privacyTitle: "गोपनीयता",
-        privacyNotice: "यह ऐप खाता पंजीकरण, लॉगिन, विज्ञापन SDK या एनालिटिक्स SDK का उपयोग नहीं करता। यह आपका वर्तमान स्थान दिखाने के लिए स्थान अनुमति मांगता है, लेकिन स्थान को सहेजता या अपने सर्वर पर नहीं भेजता।",
+        privacyNotice: "यह ऐप खाता पंजीकरण या लॉगिन सुविधा प्रदान नहीं करता। यह आपका वर्तमान स्थान दिखाने के लिए स्थान अनुमति मांगता है, लेकिन स्थान को सहेजता या अपने सर्वर पर नहीं भेजता। विज्ञापन दिखाने के लिए यह Google AdMob (Google Mobile Ads SDK) का उपयोग करता है।",
         privacyLocationTitle: "स्थान",
         privacyLocationCopy: "मानचित्र पर आपका वर्तमान स्थान दिखाने के लिए उपयोग होता है।",
         privacyNetworkTitle: "बाहरी संचार",
         privacyNetworkCopy: "पार्किंग स्थिति छवियां प्राप्त करने के लिए ऐप बाहरी URL से कनेक्ट करता है।",
         privacyOcrTitle: "टेक्स्ट पहचान",
         privacyOcrCopy: "प्राप्त छवियां डिवाइस पर पार्किंग उपलब्धता का अनुमान लगाने के लिए उपयोग होती हैं।",
-        privacyTrackingTitle: "ट्रैकिंग",
-        privacyTrackingCopy: "विज्ञापन या तृतीय-पक्ष ऐप्स और वेबसाइटों में ट्रैकिंग के लिए उपयोग नहीं होता।",
+        privacyTrackingTitle: "विज्ञापन",
+        privacyTrackingCopy: "ऐप Google AdMob बैनर विज्ञापन दिखाता है। Google Mobile Ads SDK विज्ञापन वितरण, विज्ञापन गुणवत्ता, धोखाधड़ी रोकथाम और प्रदर्शन सुधार के लिए IP पता, डिवाइस पहचानकर्ता, विज्ञापन प्रदर्शन व इंटरैक्शन जानकारी, निदान जानकारी आदि एकत्र कर सकता है।",
         contactTitle: "संपर्क",
         contactCopy: "बग रिपोर्ट या सहायता अनुरोधों के लिए कृपया Google Form से संपर्क करें। अपना डिवाइस, iOS संस्करण, किए गए चरण और स्क्रीन पर दिखी जानकारी जोड़ने से जांच आसान होती है।",
         googleFormButton: "Google Form खोलें",
-        footerDisclaimer: "ओमे मेडिकल सेंटर पार्किंग मैप, ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप नहीं है। पार्किंग स्थल उपयोग करते समय स्थल पर लगे निर्देशों और आधिकारिक जानकारी को प्राथमिकता दें।"
+        footerDisclaimer: "ओमे मेडिकल सेंटर पार्किंग मैप, ओमे म्युनिसिपल जनरल मेडिकल सेंटर का आधिकारिक ऐप नहीं है। पार्किंग स्थल उपयोग करते समय स्थल पर लगे निर्देशों और आधिकारिक जानकारी को प्राथमिकता दें।",
+        footerPrivacyRevision: "गोपनीयता नीति संशोधित: 3 मई 2026"
       },
       th: {
         pageTitle: "การสนับสนุนแผนที่ที่จอดรถศูนย์การแพทย์โอเมะ",
@@ -843,6 +866,8 @@
         aboutStatusCopy: "แอปดึงภาพสถานะที่จอดรถจากภายนอกและประเมินสถานะด้วยการรู้จำข้อความบนอุปกรณ์",
         aboutLocationTitle: "ตำแหน่งปัจจุบัน",
         aboutLocationCopy: "หลังจากอนุญาตตำแหน่งแล้ว สามารถแสดงตำแหน่งปัจจุบันของคุณบนแผนที่ได้",
+        aboutAdsTitle: "โฆษณา",
+        aboutAdsCopy: "อาจมีโฆษณาแบนเนอร์ Google AdMob แสดงที่ด้านล่างของหน้าจอเพื่อสนับสนุนการดำเนินงานของแอป",
         statusTitle: "คู่มือสถานะ",
         statusCopy: "หมุดบนแผนที่แสดงสถานะของแต่ละลานจอดรถด้วยสัญลักษณ์สั้น ๆ",
         availableShort: "ว",
@@ -863,19 +888,20 @@
         faqOfficialQuestion: "นี่เป็นแอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะหรือไม่",
         faqOfficialAnswer: "ไม่ใช่ แอปนี้ไม่ใช่แอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะ",
         privacyTitle: "ความเป็นส่วนตัว",
-        privacyNotice: "แอปนี้ไม่ใช้การลงทะเบียนบัญชี การเข้าสู่ระบบ SDK โฆษณา หรือ SDK วิเคราะห์ แอปจะขออนุญาตตำแหน่งเพื่อแสดงตำแหน่งปัจจุบัน แต่จะไม่บันทึกหรือส่งตำแหน่งไปยังเซิร์ฟเวอร์ของแอป",
+        privacyNotice: "แอปนี้ไม่มีการลงทะเบียนบัญชีหรือการเข้าสู่ระบบ แอปจะขออนุญาตตำแหน่งเพื่อแสดงตำแหน่งปัจจุบัน แต่จะไม่บันทึกหรือส่งตำแหน่งไปยังเซิร์ฟเวอร์ของแอป แอปใช้ Google AdMob (Google Mobile Ads SDK) เพื่อแสดงโฆษณา",
         privacyLocationTitle: "ตำแหน่ง",
         privacyLocationCopy: "ใช้เพื่อแสดงตำแหน่งปัจจุบันบนแผนที่",
         privacyNetworkTitle: "การสื่อสารภายนอก",
         privacyNetworkCopy: "แอปเชื่อมต่อ URL ภายนอกเพื่อดึงภาพสถานะที่จอดรถ",
         privacyOcrTitle: "การรู้จำข้อความ",
         privacyOcrCopy: "ภาพที่ดึงมาจะใช้บนอุปกรณ์เพื่อประเมินสถานะที่จอดรถ",
-        privacyTrackingTitle: "การติดตาม",
-        privacyTrackingCopy: "ไม่ใช้เพื่อโฆษณาหรือติดตามข้ามแอปและเว็บไซต์ของบุคคลที่สาม",
+        privacyTrackingTitle: "โฆษณา",
+        privacyTrackingCopy: "แอปแสดงโฆษณาแบนเนอร์ Google AdMob โดย Google Mobile Ads SDK อาจเก็บที่อยู่ IP ตัวระบุอุปกรณ์ ข้อมูลการแสดงและการโต้ตอบกับโฆษณา ข้อมูลวินิจฉัย และข้อมูลที่คล้ายกัน เพื่อการแสดงโฆษณา คุณภาพโฆษณา การป้องกันการทุจริต และการปรับปรุงประสิทธิภาพ",
         contactTitle: "ติดต่อ",
         contactCopy: "สำหรับรายงานข้อบกพร่องหรือขอรับการสนับสนุน โปรดติดต่อผ่าน Google Form การระบุอุปกรณ์ เวอร์ชัน iOS ขั้นตอนที่ทำ และสิ่งที่แสดงบนหน้าจอจะช่วยให้ตรวจสอบได้ง่ายขึ้น",
         googleFormButton: "เปิด Google Form",
-        footerDisclaimer: "แผนที่ที่จอดรถศูนย์การแพทย์โอเมะไม่ใช่แอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะ เมื่อใช้ที่จอดรถ โปรดให้ความสำคัญกับคำแนะนำในสถานที่และข้อมูลทางการ"
+        footerDisclaimer: "แผนที่ที่จอดรถศูนย์การแพทย์โอเมะไม่ใช่แอปอย่างเป็นทางการของศูนย์การแพทย์ทั่วไปเทศบาลโอเมะ เมื่อใช้ที่จอดรถ โปรดให้ความสำคัญกับคำแนะนำในสถานที่และข้อมูลทางการ",
+        footerPrivacyRevision: "แก้ไขนโยบายความเป็นส่วนตัว: 3 พฤษภาคม 2026"
       },
       vi: {
         pageTitle: "Hỗ trợ Bản đồ đỗ xe Trung tâm Y tế Ome",
@@ -904,6 +930,8 @@
         aboutStatusCopy: "Ứng dụng lấy ảnh trạng thái bãi đỗ từ bên ngoài và ước tính trạng thái bằng nhận dạng văn bản trên thiết bị.",
         aboutLocationTitle: "Vị trí hiện tại",
         aboutLocationCopy: "Sau khi cấp quyền vị trí, vị trí hiện tại của bạn có thể được hiển thị trên bản đồ.",
+        aboutAdsTitle: "Quảng cáo",
+        aboutAdsCopy: "Quảng cáo biểu ngữ Google AdMob có thể xuất hiện ở cuối màn hình để hỗ trợ vận hành ứng dụng.",
         statusTitle: "Hướng dẫn trạng thái",
         statusCopy: "Chú thích trên bản đồ hiển thị trạng thái từng bãi đỗ bằng ký hiệu ngắn.",
         availableShort: "C",
@@ -924,19 +952,20 @@
         faqOfficialQuestion: "Đây có phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome không?",
         faqOfficialAnswer: "Không. Ứng dụng này không phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome.",
         privacyTitle: "Quyền riêng tư",
-        privacyNotice: "Ứng dụng này không sử dụng đăng ký tài khoản, đăng nhập, SDK quảng cáo hoặc SDK phân tích. Ứng dụng yêu cầu quyền vị trí để hiển thị vị trí hiện tại nhưng không lưu vị trí hoặc gửi đến máy chủ riêng.",
+        privacyNotice: "Ứng dụng này không cung cấp đăng ký tài khoản hoặc đăng nhập. Ứng dụng yêu cầu quyền vị trí để hiển thị vị trí hiện tại nhưng không lưu vị trí hoặc gửi đến máy chủ riêng. Ứng dụng sử dụng Google AdMob (Google Mobile Ads SDK) để hiển thị quảng cáo.",
         privacyLocationTitle: "Vị trí",
         privacyLocationCopy: "Dùng để hiển thị vị trí hiện tại của bạn trên bản đồ.",
         privacyNetworkTitle: "Kết nối bên ngoài",
         privacyNetworkCopy: "Ứng dụng kết nối tới URL bên ngoài để lấy ảnh trạng thái bãi đỗ.",
         privacyOcrTitle: "Nhận dạng văn bản",
         privacyOcrCopy: "Ảnh đã lấy được dùng trên thiết bị để ước tính trạng thái bãi đỗ.",
-        privacyTrackingTitle: "Theo dõi",
-        privacyTrackingCopy: "Không dùng cho quảng cáo hoặc theo dõi trên ứng dụng và website của bên thứ ba.",
+        privacyTrackingTitle: "Quảng cáo",
+        privacyTrackingCopy: "Ứng dụng hiển thị quảng cáo biểu ngữ Google AdMob. Google Mobile Ads SDK có thể thu thập địa chỉ IP, mã định danh thiết bị, thông tin hiển thị và tương tác quảng cáo, thông tin chẩn đoán và dữ liệu tương tự để phân phối quảng cáo, duy trì chất lượng quảng cáo, chống gian lận và cải thiện hiệu suất.",
         contactTitle: "Liên hệ",
         contactCopy: "Để báo lỗi hoặc yêu cầu hỗ trợ, vui lòng liên hệ qua Google Form. Việc cung cấp thiết bị, phiên bản iOS, thao tác đã thực hiện và nội dung hiển thị sẽ giúp chúng tôi kiểm tra thuận lợi hơn.",
         googleFormButton: "Mở Google Form",
-        footerDisclaimer: "Bản đồ đỗ xe Trung tâm Y tế Ome không phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome. Khi sử dụng bãi đỗ, vui lòng ưu tiên hướng dẫn tại chỗ và thông tin chính thức."
+        footerDisclaimer: "Bản đồ đỗ xe Trung tâm Y tế Ome không phải ứng dụng chính thức của Trung tâm Y tế Tổng hợp Thành phố Ome. Khi sử dụng bãi đỗ, vui lòng ưu tiên hướng dẫn tại chỗ và thông tin chính thức.",
+        footerPrivacyRevision: "Chính sách quyền riêng tư được sửa đổi: 3 tháng 5, 2026"
       },
       id: {
         pageTitle: "Dukungan Peta Parkir Pusat Medis Ome",
@@ -965,6 +994,8 @@
         aboutStatusCopy: "Aplikasi mengambil gambar status parkir eksternal dan memperkirakan ketersediaan dengan pengenalan teks di perangkat.",
         aboutLocationTitle: "Lokasi Saat Ini",
         aboutLocationCopy: "Setelah izin lokasi diberikan, lokasi Anda saat ini dapat ditampilkan di peta.",
+        aboutAdsTitle: "Iklan",
+        aboutAdsCopy: "Iklan banner Google AdMob dapat muncul di bagian bawah layar untuk mendukung operasional aplikasi.",
         statusTitle: "Panduan Status",
         statusCopy: "Anotasi peta menampilkan status setiap tempat parkir dengan simbol singkat.",
         availableShort: "T",
@@ -985,19 +1016,20 @@
         faqOfficialQuestion: "Apakah ini aplikasi resmi dari Pusat Medis Umum Kota Ome?",
         faqOfficialAnswer: "Tidak. Aplikasi ini bukan aplikasi resmi dari Pusat Medis Umum Kota Ome.",
         privacyTitle: "Privasi",
-        privacyNotice: "Aplikasi ini tidak menggunakan pendaftaran akun, login, SDK iklan, atau SDK analitik. Aplikasi meminta izin lokasi untuk menampilkan lokasi saat ini, tetapi tidak menyimpan lokasi atau mengirimnya ke server milik aplikasi.",
+        privacyNotice: "Aplikasi ini tidak menyediakan pendaftaran akun atau login. Aplikasi meminta izin lokasi untuk menampilkan lokasi saat ini, tetapi tidak menyimpan lokasi atau mengirimnya ke server milik aplikasi. Aplikasi menggunakan Google AdMob (Google Mobile Ads SDK) untuk menampilkan iklan.",
         privacyLocationTitle: "Lokasi",
         privacyLocationCopy: "Digunakan untuk menampilkan lokasi Anda saat ini di peta.",
         privacyNetworkTitle: "Komunikasi Eksternal",
         privacyNetworkCopy: "Aplikasi terhubung ke URL eksternal untuk mengambil gambar status parkir.",
         privacyOcrTitle: "Pengenalan Teks",
         privacyOcrCopy: "Gambar yang diambil digunakan di perangkat untuk memperkirakan ketersediaan parkir.",
-        privacyTrackingTitle: "Pelacakan",
-        privacyTrackingCopy: "Tidak digunakan untuk iklan atau pelacakan lintas aplikasi dan situs web pihak ketiga.",
+        privacyTrackingTitle: "Iklan",
+        privacyTrackingCopy: "Aplikasi menampilkan iklan banner Google AdMob. Google Mobile Ads SDK dapat mengumpulkan alamat IP, pengenal perangkat, informasi tayangan dan interaksi iklan, informasi diagnostik, dan data serupa untuk penayangan iklan, kualitas iklan, pencegahan penipuan, dan peningkatan kinerja.",
         contactTitle: "Kontak",
         contactCopy: "Untuk laporan bug atau permintaan dukungan, hubungi kami melalui Google Form. Menyertakan perangkat, versi iOS, langkah yang dilakukan, dan tampilan di layar akan membantu investigasi.",
         googleFormButton: "Buka Google Form",
-        footerDisclaimer: "Peta Parkir Pusat Medis Ome bukan aplikasi resmi dari Pusat Medis Umum Kota Ome. Saat menggunakan tempat parkir, harap prioritaskan panduan di lokasi dan informasi resmi."
+        footerDisclaimer: "Peta Parkir Pusat Medis Ome bukan aplikasi resmi dari Pusat Medis Umum Kota Ome. Saat menggunakan tempat parkir, harap prioritaskan panduan di lokasi dan informasi resmi.",
+        footerPrivacyRevision: "Kebijakan privasi direvisi: 3 Mei 2026"
       },
       ms: {
         pageTitle: "Sokongan Peta Parkir Pusat Perubatan Ome",
@@ -1026,6 +1058,8 @@
         aboutStatusCopy: "Aplikasi mendapatkan imej status parkir luaran dan menganggarkan ketersediaan dengan pengecaman teks pada peranti.",
         aboutLocationTitle: "Lokasi Semasa",
         aboutLocationCopy: "Selepas kebenaran lokasi diberikan, lokasi semasa anda boleh dipaparkan pada peta.",
+        aboutAdsTitle: "Iklan",
+        aboutAdsCopy: "Iklan sepanduk Google AdMob mungkin dipaparkan di bahagian bawah skrin untuk menyokong operasi aplikasi.",
         statusTitle: "Panduan Status",
         statusCopy: "Anotasi peta menunjukkan status setiap tempat letak kereta dengan simbol ringkas.",
         availableShort: "T",
@@ -1046,19 +1080,20 @@
         faqOfficialQuestion: "Adakah ini aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome?",
         faqOfficialAnswer: "Tidak. Aplikasi ini bukan aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome.",
         privacyTitle: "Privasi",
-        privacyNotice: "Aplikasi ini tidak menggunakan pendaftaran akaun, log masuk, SDK iklan atau SDK analitik. Ia meminta kebenaran lokasi untuk memaparkan lokasi semasa, tetapi tidak menyimpan lokasi anda atau menghantarnya ke pelayan milik aplikasi.",
+        privacyNotice: "Aplikasi ini tidak menyediakan pendaftaran akaun atau log masuk. Ia meminta kebenaran lokasi untuk memaparkan lokasi semasa, tetapi tidak menyimpan lokasi anda atau menghantarnya ke pelayan milik aplikasi. Aplikasi ini menggunakan Google AdMob (Google Mobile Ads SDK) untuk memaparkan iklan.",
         privacyLocationTitle: "Lokasi",
         privacyLocationCopy: "Digunakan untuk memaparkan lokasi semasa anda pada peta.",
         privacyNetworkTitle: "Komunikasi Luaran",
         privacyNetworkCopy: "Aplikasi menyambung ke URL luaran untuk mendapatkan imej status parkir.",
         privacyOcrTitle: "Pengecaman Teks",
         privacyOcrCopy: "Imej yang diperoleh digunakan pada peranti untuk menganggarkan ketersediaan parkir.",
-        privacyTrackingTitle: "Penjejakan",
-        privacyTrackingCopy: "Tidak digunakan untuk pengiklanan atau penjejakan merentas aplikasi dan laman web pihak ketiga.",
+        privacyTrackingTitle: "Iklan",
+        privacyTrackingCopy: "Aplikasi memaparkan iklan sepanduk Google AdMob. Google Mobile Ads SDK mungkin mengumpulkan alamat IP, pengecam peranti, maklumat paparan dan interaksi iklan, maklumat diagnostik dan data serupa untuk penyampaian iklan, kualiti iklan, pencegahan penipuan dan peningkatan prestasi.",
         contactTitle: "Hubungi",
         contactCopy: "Untuk laporan pepijat atau permintaan sokongan, sila hubungi kami melalui Google Form. Menyertakan peranti, versi iOS, langkah yang dibuat dan perkara yang dipaparkan pada skrin akan membantu siasatan.",
         googleFormButton: "Buka Google Form",
-        footerDisclaimer: "Peta Parkir Pusat Perubatan Ome bukan aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome. Semasa menggunakan tempat letak kereta, sila utamakan panduan di lokasi dan maklumat rasmi."
+        footerDisclaimer: "Peta Parkir Pusat Perubatan Ome bukan aplikasi rasmi Pusat Perubatan Umum Perbandaran Ome. Semasa menggunakan tempat letak kereta, sila utamakan panduan di lokasi dan maklumat rasmi.",
+        footerPrivacyRevision: "Dasar privasi disemak: 3 Mei 2026"
       },
       tl: {
         pageTitle: "Suporta para sa Mapa ng Paradahan ng Ome Medical Center",
@@ -1087,6 +1122,8 @@
         aboutStatusCopy: "Kinukuha ng app ang mga external na larawan ng status ng paradahan at tinataya ang availability gamit ang on-device text recognition.",
         aboutLocationTitle: "Kasalukuyang Lokasyon",
         aboutLocationCopy: "Pagkatapos pahintulutan ang lokasyon, maipapakita sa mapa ang kasalukuyan mong lokasyon.",
+        aboutAdsTitle: "Mga ad",
+        aboutAdsCopy: "Maaaring lumabas ang mga banner ad ng Google AdMob sa ibaba ng screen upang suportahan ang pagpapatakbo ng app.",
         statusTitle: "Gabay sa Status",
         statusCopy: "Ipinapakita ng mga annotation sa mapa ang status ng bawat paradahan gamit ang maikling simbolo.",
         availableShort: "B",
@@ -1107,19 +1144,20 @@
         faqOfficialQuestion: "Opisyal ba itong app ng Ome Municipal General Medical Center?",
         faqOfficialAnswer: "Hindi. Ang app na ito ay hindi opisyal na app ng Ome Municipal General Medical Center.",
         privacyTitle: "Privacy",
-        privacyNotice: "Hindi gumagamit ang app na ito ng account registration, login, ad SDK, o analytics SDK. Humihingi ito ng pahintulot sa lokasyon upang ipakita ang kasalukuyang lokasyon, ngunit hindi nito iniimbak o ipinapadala ang lokasyon sa sariling server.",
+        privacyNotice: "Hindi nagbibigay ang app na ito ng account registration o login. Humihingi ito ng pahintulot sa lokasyon upang ipakita ang kasalukuyang lokasyon, ngunit hindi nito iniimbak o ipinapadala ang lokasyon sa sariling server. Gumagamit ito ng Google AdMob (Google Mobile Ads SDK) upang magpakita ng mga ad.",
         privacyLocationTitle: "Lokasyon",
         privacyLocationCopy: "Ginagamit upang ipakita ang kasalukuyan mong lokasyon sa mapa.",
         privacyNetworkTitle: "External na Komunikasyon",
         privacyNetworkCopy: "Kumokonekta ang app sa external URL upang kumuha ng mga larawan ng status ng paradahan.",
         privacyOcrTitle: "Text Recognition",
         privacyOcrCopy: "Ginagamit sa device ang mga nakuhang larawan upang tantiyahin ang availability ng paradahan.",
-        privacyTrackingTitle: "Tracking",
-        privacyTrackingCopy: "Hindi ginagamit para sa advertising o tracking sa mga third-party app at website.",
+        privacyTrackingTitle: "Mga ad",
+        privacyTrackingCopy: "Nagpapakita ang app ng mga banner ad ng Google AdMob. Maaaring mangolekta ang Google Mobile Ads SDK ng IP address, device identifiers, impormasyon sa pagpapakita at pakikipag-ugnayan sa ad, diagnostics, at katulad na data para sa paghahatid ng ad, kalidad ng ad, pag-iwas sa pandaraya, at pagpapahusay ng performance.",
         contactTitle: "Contact",
         contactCopy: "Para sa bug report o support request, makipag-ugnayan sa amin sa pamamagitan ng Google Form. Makakatulong sa pagsusuri ang pagsama ng device, bersyon ng iOS, mga hakbang na ginawa, at ipinakita sa screen.",
         googleFormButton: "Buksan ang Google Form",
-        footerDisclaimer: "Ang Mapa ng Paradahan ng Ome Medical Center ay hindi opisyal na app ng Ome Municipal General Medical Center. Kapag gumagamit ng paradahan, unahin ang gabay sa lugar at opisyal na impormasyon."
+        footerDisclaimer: "Ang Mapa ng Paradahan ng Ome Medical Center ay hindi opisyal na app ng Ome Municipal General Medical Center. Kapag gumagamit ng paradahan, unahin ang gabay sa lugar at opisyal na impormasyon.",
+        footerPrivacyRevision: "Binago ang patakaran sa privacy: Mayo 3, 2026"
       },
       ru: {
         pageTitle: "Поддержка карты парковок Медицинского центра Омэ",
@@ -1148,6 +1186,8 @@
         aboutStatusCopy: "Приложение получает внешние изображения статуса парковок и оценивает доступность с помощью распознавания текста на устройстве.",
         aboutLocationTitle: "Текущее местоположение",
         aboutLocationCopy: "После разрешения доступа к геопозиции ваше текущее местоположение может отображаться на карте.",
+        aboutAdsTitle: "Реклама",
+        aboutAdsCopy: "Баннерная реклама Google AdMob может отображаться внизу экрана для поддержки работы приложения.",
         statusTitle: "Статусы",
         statusCopy: "Аннотации на карте показывают статус каждой парковки коротким символом.",
         availableShort: "Е",
@@ -1168,19 +1208,20 @@
         faqOfficialQuestion: "Это официальное приложение Муниципального общего медицинского центра Омэ?",
         faqOfficialAnswer: "Нет. Это приложение не является официальным приложением Муниципального общего медицинского центра Омэ.",
         privacyTitle: "Конфиденциальность",
-        privacyNotice: "Приложение не использует регистрацию аккаунта, вход, рекламные SDK или аналитические SDK. Оно запрашивает доступ к геопозиции для отображения текущего местоположения, но не сохраняет его и не отправляет на собственный сервер.",
+        privacyNotice: "Приложение не предоставляет регистрацию аккаунта или вход. Оно запрашивает доступ к геопозиции для отображения текущего местоположения, но не сохраняет его и не отправляет на собственный сервер. Для показа рекламы используется Google AdMob (Google Mobile Ads SDK).",
         privacyLocationTitle: "Геопозиция",
         privacyLocationCopy: "Используется для отображения текущего местоположения на карте.",
         privacyNetworkTitle: "Внешние соединения",
         privacyNetworkCopy: "Приложение подключается к внешним URL для получения изображений статуса парковок.",
         privacyOcrTitle: "Распознавание текста",
         privacyOcrCopy: "Полученные изображения используются на устройстве для оценки доступности парковок.",
-        privacyTrackingTitle: "Отслеживание",
-        privacyTrackingCopy: "Не используется для рекламы или отслеживания в сторонних приложениях и на веб-сайтах.",
+        privacyTrackingTitle: "Реклама",
+        privacyTrackingCopy: "Приложение показывает баннерную рекламу Google AdMob. Google Mobile Ads SDK может собирать IP-адрес, идентификаторы устройства, сведения о показах и взаимодействии с рекламой, диагностические данные и подобную информацию для показа рекламы, качества рекламы, предотвращения мошенничества и улучшения производительности.",
         contactTitle: "Контакты",
         contactCopy: "Для сообщений об ошибках или запросов поддержки свяжитесь с нами через Google Form. Укажите устройство, версию iOS, выполненные действия и то, что отображалось на экране, чтобы нам было проще разобраться.",
         googleFormButton: "Открыть Google Form",
-        footerDisclaimer: "Карта парковок Медицинского центра Омэ не является официальным приложением Муниципального общего медицинского центра Омэ. При использовании парковок отдавайте приоритет указателям на месте и официальной информации."
+        footerDisclaimer: "Карта парковок Медицинского центра Омэ не является официальным приложением Муниципального общего медицинского центра Омэ. При использовании парковок отдавайте приоритет указателям на месте и официальной информации.",
+        footerPrivacyRevision: "Политика конфиденциальности обновлена: 3 мая 2026 г."
       }
     };
 

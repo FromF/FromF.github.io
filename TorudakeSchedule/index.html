@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="撮るだけ予定登録のサポートページです。使い方、よくある質問、プライバシーポリシー、お問い合わせ先を掲載しています。">
+  <title>撮るだけ予定登録 サポート</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --surface-soft: #edf4f0;
+      --text: #172033;
+      --muted: #657083;
+      --line: #dce2ea;
+      --primary: #168443;
+      --primary-dark: #0f6432;
+      --accent: #d83a32;
+      --warm: #fff4dc;
+      --shadow: 0 16px 42px rgba(23, 32, 51, 0.12);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--primary-dark);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .site-header {
+      background:
+        linear-gradient(90deg, rgba(247, 248, 250, 0.98), rgba(247, 248, 250, 0.86)),
+        url("image/AppIcon.png");
+      background-position: center;
+      background-size: cover;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner,
+    main,
+    .footer-inner {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      min-height: 430px;
+      display: grid;
+      align-content: center;
+      gap: 28px;
+      padding: 56px 0 44px;
+    }
+
+    .app-mark {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.25rem);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .button.secondary {
+      background: var(--surface);
+      color: var(--primary-dark);
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .button.secondary:hover,
+    .button.secondary:focus-visible {
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+    }
+
+    nav {
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      width: min(1040px, calc(100% - 32px));
+      min-height: 56px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    .nav-inner a {
+      flex: 0 0 auto;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-inner a:hover,
+    .nav-inner a:focus-visible {
+      background: var(--surface-soft);
+    }
+
+    main {
+      display: grid;
+      gap: 56px;
+      padding: 56px 0;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+    }
+
+    .section-copy {
+      max-width: 760px;
+      margin: 0 0 22px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .panel {
+      min-height: 100%;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.07);
+    }
+
+    .panel p,
+    .faq p,
+    .notice p,
+    .caption {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--muted);
+      counter-increment: step;
+    }
+
+    .steps li::before {
+      width: 42px;
+      height: 42px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 900;
+      content: counter(step);
+    }
+
+    .screenshots {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .screenshot {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.07);
+    }
+
+    .screenshot img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1260 / 2736;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 0.93rem;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .notice {
+      padding: 22px;
+      border-left: 5px solid var(--primary);
+      background: #edf5f0;
+    }
+
+    .notice.warning {
+      border-left-color: var(--accent);
+      background: var(--warm);
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-list strong {
+      display: inline-block;
+      min-width: 9em;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .footer-inner {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner p {
+      margin: 0;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        min-height: 360px;
+      }
+
+      .grid,
+      .screenshots {
+        grid-template-columns: 1fr;
+      }
+
+      .screenshots {
+        max-width: 360px;
+      }
+
+      .steps li {
+        grid-template-columns: 36px minmax(0, 1fr);
+      }
+
+      .steps li::before {
+        width: 36px;
+        height: 36px;
+      }
+
+      .meta-list strong {
+        display: block;
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="app-mark">
+        <img class="app-icon" src="image/AppIcon.png" alt="撮るだけ予定登録のアプリアイコン">
+        <div>
+          <p class="eyebrow">サポートサイト</p>
+          <strong>撮るだけ予定登録</strong>
+        </div>
+      </div>
+      <h1>イベント案内を撮るだけ。予定候補を確認してカレンダーへ。</h1>
+      <p class="lead">紙の案内、チラシ、告知画像を撮影または写真から選択し、読み取ったイベント情報を確認・編集してiOSカレンダーに登録できるアプリです。</p>
+      <div class="actions">
+        <a class="button" href="#contact">問い合わせる</a>
+        <a class="button secondary" href="#usage">使い方を見る</a>
+        <a class="button secondary" href="#faq">よくある質問</a>
+      </div>
+    </div>
+    <nav aria-label="ページ内ナビゲーション">
+      <div class="nav-inner">
+        <a href="#about">概要</a>
+        <a href="#features">機能</a>
+        <a href="#usage">使い方</a>
+        <a href="#screenshots">画面</a>
+        <a href="#faq">FAQ</a>
+        <a href="#privacy">プライバシー</a>
+        <a href="#environment">対応環境</a>
+        <a href="#contact">問い合わせ</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>概要</h2>
+      <p class="section-copy">撮るだけ予定登録は、イベント案内やチラシの画像から予定候補を読み取り、カレンダー入力の手間を減らすためのiPhoneアプリです。</p>
+      <div class="grid">
+        <article class="panel">
+          <h3>撮影して読み取り</h3>
+          <p>カメラで案内画像を撮影するか、写真アプリから画像を選んで予定情報を解析できます。</p>
+        </article>
+        <article class="panel">
+          <h3>登録前に確認</h3>
+          <p>検出されたタイトル、日時、場所、メモを登録前に確認し、必要に応じて編集できます。</p>
+        </article>
+        <article class="panel">
+          <h3>まとめて登録</h3>
+          <p>1枚の画像から複数の予定を検出し、必要なものだけを選んで一括でカレンダーに登録できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>主な機能</h2>
+      <p class="section-copy">地域イベント、学校行事、講座、説明会、点検予定など、画像からカレンダーに移したい場面を想定しています。</p>
+      <div class="grid">
+        <article class="panel">
+          <h3>画像内の文字認識</h3>
+          <p>撮影画像や選択した画像の文字を読み取り、イベント名や日時らしき情報を抽出します。</p>
+        </article>
+        <article class="panel">
+          <h3>候補の選択と編集</h3>
+          <p>予定ではない案内や申込締切などを外し、登録したい候補だけを選択できます。</p>
+        </article>
+        <article class="panel">
+          <h3>登録先カレンダー選択</h3>
+          <p>登録前にカレンダーを選び、重複の可能性がある予定も確認できます。</p>
+        </article>
+        <article class="panel">
+          <h3>解析履歴</h3>
+          <p>過去に読み取った結果を確認し、必要に応じて再編集できます。</p>
+        </article>
+        <article class="panel">
+          <h3>共有から読み取り</h3>
+          <p>写真アプリなどから画像を共有し、撮るだけ予定登録で解析できます。</p>
+        </article>
+        <article class="panel">
+          <h3>端末上で処理</h3>
+          <p>画像解析と予定候補の抽出は対応端末上で行われ、画像や抽出結果を開発者のサーバーへ送信しません。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="usage">
+      <h2>基本的な使い方</h2>
+      <p class="section-copy">案内画像を用意し、読み取り結果を確認してからカレンダーへ登録します。</p>
+      <ol class="steps">
+        <li>アプリを開き、「スタート」をタップします。</li>
+        <li>イベント案内やチラシを撮影するか、写真アプリから画像を選択します。</li>
+        <li>解析が完了するまで待ちます。</li>
+        <li>検出された予定候補のタイトル、日時、場所、メモを確認します。</li>
+        <li>必要な予定だけを選び、必要に応じて内容を編集します。</li>
+        <li>登録先カレンダーを確認し、選択した予定を登録します。</li>
+      </ol>
+    </section>
+
+    <section id="screenshots">
+      <h2>画面イメージ</h2>
+      <p class="section-copy">撮影、候補確認、登録、履歴確認までをシンプルな流れで進められます。</p>
+      <div class="screenshots">
+        <figure class="screenshot">
+          <img src="image/screenshot01.png" alt="撮るだけ予定登録のスタート画面">
+          <figcaption class="caption">スタート画面から撮影や使い方確認へ進めます。</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="image/screenshot02.png" alt="イベント案内を撮影する画面">
+          <figcaption class="caption">案内画像を撮影、または写真から選択します。</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="image/screenshot04.png" alt="検出された予定候補の確認画面">
+          <figcaption class="caption">検出された予定候補を登録前に確認できます。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>よくある質問</h2>
+      <div class="faq-list">
+        <article class="faq">
+          <h3>画像を撮影すれば必ず正しい予定が作成されますか。</h3>
+          <p>いいえ。画像の明るさ、文字の小ささ、レイアウト、日時表記によって読み取り結果が変わります。登録前に必ず候補内容を確認してください。</p>
+        </article>
+        <article class="faq">
+          <h3>予定ではない情報が候補に出ます。</h3>
+          <p>申込締切、問い合わせ先、注意書きなどが候補として表示される場合があります。不要な候補はチェックを外して登録対象から除外できます。</p>
+        </article>
+        <article class="faq">
+          <h3>カレンダーに登録できません。</h3>
+          <p>iOSの設定でカレンダーへのアクセスが許可されているか確認してください。登録先カレンダーが読み取り専用の場合は、別のカレンダーを選択してください。</p>
+        </article>
+        <article class="faq">
+          <h3>写真や読み取り結果は外部に送信されますか。</h3>
+          <p>画像解析と予定候補の抽出は対応端末上で処理されます。開発者は、ユーザーが選択した画像や抽出結果をサーバーへ送信しません。</p>
+        </article>
+        <article class="faq">
+          <h3>撮影した画像は写真アプリに保存されますか。</h3>
+          <p>カメラで撮影した案内画像は写真アプリに保存されます。写真アプリから選択した既存画像は重複保存しません。</p>
+        </article>
+        <article class="faq">
+          <h3>履歴は削除できますか。</h3>
+          <p>アプリ内の履歴画面から、不要になった解析履歴を削除できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>プライバシー</h2>
+      <div class="notice warning">
+        <p>読み取り結果は自動生成されるため、重要な予定は登録前に必ず日時、場所、タイトルを確認してください。</p>
+      </div>
+      <ul class="meta-list" aria-label="プライバシー項目">
+        <li><strong>取得する情報</strong>ユーザーが撮影または選択した画像、読み取った文字、抽出された予定候補、解析履歴をアプリ内で扱います。</li>
+        <li><strong>利用目的</strong>画像の文字認識、予定候補の抽出、候補の表示・編集、カレンダー登録、解析履歴の表示のために利用します。</li>
+        <li><strong>保存と削除</strong>解析履歴と予定候補は端末内に保存され、アプリ内の操作で削除できます。</li>
+        <li><strong>外部送信</strong>画像や抽出結果を開発者のサーバーへ送信しません。</li>
+        <li><strong>第三者提供</strong>開発者は、画像、読み取り結果、予定候補、解析履歴を第三者へ販売または広告目的で提供しません。</li>
+        <li><strong>広告</strong>本アプリではサードパーティ広告を表示しません。</li>
+        <li><strong>権限</strong>カメラ、写真、カレンダーへのアクセスは、撮影、画像選択、予定登録のために使用します。</li>
+        <li><strong>最終更新日</strong>2026年5月31日</li>
+      </ul>
+    </section>
+
+    <section id="environment">
+      <h2>対応環境</h2>
+      <p class="section-copy">利用できる機能は、端末、OS、Apple Intelligenceの設定やモデルの準備状況によって変わる場合があります。</p>
+      <ul class="meta-list" aria-label="対応環境">
+        <li><strong>対応OS</strong>iOS 26以降</li>
+        <li><strong>対応端末</strong>Apple Intelligence対応端末</li>
+        <li><strong>必要な権限</strong>カメラ、写真追加、カレンダー</li>
+        <li><strong>アカウント</strong>ログインやアカウント作成は不要です。</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>問い合わせ</h2>
+      <p class="section-copy">不具合の報告、ご質問、ご要望はお問い合わせフォームからお送りください。確認に必要な場合は、端末名、iOSバージョン、アプリのバージョン、発生した操作を添えてください。</p>
+      <div class="actions">
+        <a class="button" href="https://forms.gle/hm1KTnACx1T5c7ow8" target="_blank" rel="noopener noreferrer">お問い合わせフォームを開く</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Copyright © 2026 Haruhito Fuji. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
